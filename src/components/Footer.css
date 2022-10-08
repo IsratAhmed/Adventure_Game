@@ -1,0 +1,83 @@
+.footer-top-container {
+    background-color: #26110d;
+    
+}
+
+.footer-middle-socials a {
+    list-style: none;
+    display: inline-flex;
+    margin:0.5em;
+    padding: 0.5em;
+
+}
+
+.footer-middle-container-socials {
+    background-color:#180806;
+    text-align: center;
+}
+
+.footer {
+    color: white;
+    display: flex;
+}
+
+.footer-middle-socials {
+    color: white;
+    padding: 0.2rem;
+
+}
+
+.footer-middle-socials h2 {
+    color: white;   
+    margin-top: 1.5rem;
+    font-size: 14px;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS','sans-serif' ;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer-middle-socials hr {
+    margin: auto 220px;
+    background-color:goldenrod;
+    height: 0.2px;
+    border: none;
+    margin-top: 1.5rem;
+    
+
+}
+
+.footer-top-2-Legal{
+    flex-direction: column;
+    margin-right: 6rem;
+    margin-left: 5.5rem;
+    padding-top: 4rem;
+
+}
+
+.footer-top-3-About {
+    flex-direction: column;
+    margin-right: 6rem;
+    margin-left: 5.5rem;
+    padding-top: 4rem;
+
+}
+
+.footer-top-4-form{
+    flex-direction: column;
+    margin-right: 6rem;
+    margin-left: 5.5rem;
+    padding-top: 4rem;
+
+}
+
+.footer-bottom-container-copyright{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-size: 12px;
+
+}
+
+
+
