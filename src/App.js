@@ -1,10 +1,14 @@
 import './App.css';
+import GameContainer from './Containers/GameContainer';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-    
-    </div>
+    <>
+      <GameContainer />
+      <Footer/>
+    </>
+
   );
 }
 
