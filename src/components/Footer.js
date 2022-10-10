@@ -11,7 +11,7 @@ const Footer = () => {
 
                 <div className="footer">
                     <div className="footer-top-1-logo">
-                        <img className="company-logo" src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Evil_Dead_The_Game_Logo.png" alt="company logo" height="70px" />
+                        <img className="company-logo" src="" alt="company logo" height="70px" />
                     </div>
 
                     <div className='footer-content'>
