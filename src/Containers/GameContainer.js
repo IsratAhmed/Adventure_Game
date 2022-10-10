@@ -19,7 +19,7 @@ const GameContainer = () => {
  return (
 
         <div className="App">
-            <h1>Game Title(here)</h1> 
+            <h1>Scrolls of Odyssey: Call to Tarragon</h1> 
 
         </div>
 
