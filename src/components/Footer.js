@@ -27,8 +27,8 @@ const Footer = () => {
 
                         <div className="footer-heading footer 3-about">
                             <h2>Who we are</h2>
-                            <p><a href="#">FrontEnd Developers</a></p>
-                            <p><a href="#">BackEnd Developers</a></p>
+                            <p><a href="#">Front-end Developers</a></p>
+                            <p><a href="#">Back-end Developers</a></p>
                             <p><a href="#">Careers</a></p>
                             <p><a href="#">Partners</a></p>
 
@@ -60,7 +60,6 @@ const Footer = () => {
 
                         </div>
                     </div>
-
 
                     <div className="footer-social">
                         <hr />
@@ -100,7 +99,7 @@ const Footer = () => {
 
             <div className="footer-bottom">
                 <p>
-                    &copy;{new Date().getFullYear()} | AdventureGame. All rights reserved. AdventureGame and the AdventureGame logo are trademarks of AdventureGame in the U.K. and/or other regions.
+                    &copy;{new Date().getFullYear()} | SO:CT. All rights reserved. SO:CT and the SO:CT logo are trademarks of SO:CT in the U.K. and/or other regions.
                 </p>
 
                 <p>
