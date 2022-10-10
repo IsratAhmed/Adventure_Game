@@ -1,9 +1,8 @@
 import Title from './Title';
 import NavBar from './NavBar';
-import GameContainer from './containers/GameContainer';
-
-import './App.css';
 import Instructions from './Instructions';
+import GameContainer from './containers/GameContainer';
+import './App.css';
 
 function App() {
   return (

@@ -47,12 +47,14 @@ ul li {
   margin: 0 120px;
 }
 
-ol li {
+div.instructionContainer {
+  text-align: center;
   color: white;
 }
 
-h3 {
-  color: white;
+ol.OL{
+  display: inline-block;
+  text-align: left;
 }
 
 section {
