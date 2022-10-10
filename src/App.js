@@ -1,8 +1,10 @@
 import Title from './Title';
-import NavBar from './NavBar';
+// import NavBar from './NavBar';
 import Instructions from './Instructions';
 import GameContainer from './containers/GameContainer';
 import './App.css';
+import NavbarComponent from './components/NavbarComponent';
+import './NavbarComponent.css';
 
 function App() {
   return (
@@ -12,7 +14,8 @@ function App() {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat'}}>
       <header>
-        <NavBar />
+        {/* <NavBar /> */}
+        <NavbarComponent/>
         <Title />
         <Instructions />
       </header>
