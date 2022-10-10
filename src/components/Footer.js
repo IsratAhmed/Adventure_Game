@@ -11,7 +11,7 @@ const Footer = () => {
 
                 <div className="footer">
                     <div className="footer-top-1-logo">
-                        <img className="company-logo" src="https://i0.wp.com/www.tracyandmatt.co.uk/wp/wp-content/uploads/2016/04/Gameloft-Gets-With-AppNexus-What-Are-They-Up-To.png" alt="company logo" height="70px" />
+                        <img className="company-logo" src="/logo.png" alt="company logo" height="70px" />
                     </div>
 
                     <div className='footer-content'>
