@@ -3,6 +3,8 @@ import Title from './Title';
 import Instructions from './Instructions';
 import GameContainer from './containers/GameContainer';
 import './App.css';
+import Footer from './components/Footer';
+
 import NavbarComponent from './components/NavbarComponent';
 import './NavbarComponent.css';
 
@@ -13,17 +15,23 @@ function App() {
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat'}}>
+      
       <header>
         {/* <NavBar /> */}
         <NavbarComponent/>
         <Title />
         <Instructions />
       </header>
+
       <main>
         <section>
           <GameContainer />
         </section>
       </main>
+
+      <footer>
+      <Footer/>
+      </footer>
     </div>
   )
 }

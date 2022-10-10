@@ -62,3 +62,8 @@ ol.OL{
 section {
   background-color: white;
 }
+
+.instructionContainer {
+  height: 100%;
+
+}
