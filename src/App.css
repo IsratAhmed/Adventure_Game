@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+h1 {
+  color: red;
+  font-family: 'Brush Script MT', cursive; 
+}
+
+ul li {
+  display: inline-block;
+  margin: 0 120px;
+}
+
+ol li {
+  color: white;
+}
+
+h3 {
+  color: white;
+}
+
+section {
+  background-color: white;
+}
