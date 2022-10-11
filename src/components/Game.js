@@ -11,16 +11,19 @@ const Game = ({postPlayer}) => {
         // weapon: null
     });
 
+    const [statePlayerName, setStatePlayerName] = useState("");
+
     const handleChange = (event) => {
         // let propertyName = event.target.name;
-        let copiedPlayer = {...statePlayer};
-        copiedPlayer.name = event.target.value;
-        setStatePlayer(copiedPlayer);
+        // let copiedPlayer = {...statePlayer};
+        // copiedPlayer.name = event.target.value;
+        setStatePlayerName(event.target.value);
     };
 
     const handlePlayerSubmit = (event) => {
         event.preventDefault();
-        postPlayer(statePlayer);
+        // postPlayer(statePlayer);
+        postPlayer(statePlayerName);
     }
 
     return (
@@ -32,7 +35,7 @@ const Game = ({postPlayer}) => {
         backgroundRepeat: 'no-repeat'}}>
     
         <form onSubmit={handlePlayerSubmit}>
-            <input type="text" placeholder="Enter name" name="name" onChange={handleChange} value={statePlayer.name}/>
+            <input type="text" placeholder="Enter name" name="name" onChange={handleChange} value={statePlayerName}/>
             <button type="Submit"> <Link to="/Lobby">Start Game</Link></button>
         </form>
 

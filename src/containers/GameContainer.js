@@ -18,11 +18,12 @@ const GameContainer = () => {
         fetchPlayersData();
     }, []);
 
-    const postPlayer = async(newPlayer) => {
-        const response = await fetch("http://localhost:8080/players?name=" + newPlayer, {
+    const postPlayer = async(newPlayerName) => {
+        // const newPlayerName = newPlayer.name;
+        const response = await fetch("http://localhost:8080/players?name=" + newPlayerName, {
             method:"POST", 
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(newPlayer)
+            body: JSON.stringify({ name: newPlayerName })
         });
         const savedPlayer = await response.json();
         setPlayers([...players, savedPlayer]);
