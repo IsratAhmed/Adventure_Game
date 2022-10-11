@@ -4,7 +4,6 @@ import PlayerList from "../components/PlayerList";
 
 const Game = ({postPlayer}) => {
 
-<<<<<<< HEAD
     const [statePlayer, setStatePlayer] = useState({
         name: "",
         // numberOfWins: 0,
@@ -23,21 +22,6 @@ const Game = ({postPlayer}) => {
     const handlePlayerSubmit = (event) => {
         event.preventDefault();
         postPlayer(statePlayer);
-=======
-    const [statePlayer, setStatePlayer] = useState(
-        {
-            name: "",
-
-        }
-    )
-
-    const handleChange = (event) => {
-
-        let playerName = event.target.name;
-        let copiedPlayer = {...statePlayer}
-        copiedPlayer[playerName] = event.target.value;
-        setStatePlayer(copiedPlayer);
->>>>>>> carlaBranch
     }
 
     const handleFormSubmit = (event) => {
@@ -46,24 +30,6 @@ const Game = ({postPlayer}) => {
 
 
     }
-
-    // const [statePlayer, setStatePlayer] = useState({
-    //     name: " ",
-    //     numberOfWins: 0,
-    //     hitPoints: 100,
-    //     gold: 2,
-    //     weapon: null
-    // });
-
-    // const handleChange = (event) => {
-    //     let copiedPlayer = {...statePlayer};
-    //     copiedPlayer.name = event.target.value;
-    //     setStatePlayer(copiedPlayer);
-    // };
-
-    // const handlePlayerSubmit = (event) => {
-    //     postPlayer(statePlayer)
-    // }
 
     return (
         
