@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+#shop {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 30px;
+    background-image: url('/src/assets/background/shop_bg.png');
+      background-repeat: repeat;
+      background-size:contain;
+  
+  }

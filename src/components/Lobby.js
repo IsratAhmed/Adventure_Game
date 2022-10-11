@@ -1,13 +1,22 @@
 import {Link} from "react-router-dom";
+import './Lobby.css';
+
+import playBtn from "../assets/background/play.png"
 
 const Lobby = () => {
-    
+
     return(
-        <>
-        
-            <button><Link to="/Shop">Shop</Link></button>
-            <button><Link to="/Battle">Battle</Link></button>
-        </>
+
+        <section className="lobby-section" id="lobby">
+            <div className="lobby-buttons">
+                
+                <Link to="/Shop"><img src={playBtn} /></Link>
+                <Link to="/Battle"><img src={playBtn} /></Link>
+
+            </div>
+
+        </section>
+
     )
 }
 

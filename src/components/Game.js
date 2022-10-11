@@ -1,6 +1,8 @@
 import { useState } from "react";
 import {Link} from "react-router-dom";
 import PlayerList from "../components/PlayerList";
+import '../components/Game.css';
+import playImg from "../assets/background/play.png";
 
 const Game = ({postGame}) => {
 
@@ -39,24 +41,21 @@ const Game = ({postGame}) => {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'}}>
-    
+            
+    <section className="game-section" id="game">
+        <div className="game-buttons">
+            <div className="inputBox">
         <form onSubmit={handlePlayerSubmit}>
-            <input type="text" placeholder="Enter name" name="name" onChange={handleChange} value={statePlayerName}/>
+            <input type="text" placeholder="Enter name" name="name" onChange={handleChange} value={statePlayerName} required = "required"/>
             <button type="Submit">Start Game</button>
-            {/* <button> <Link to="/Lobby">Start Game</Link></button>    */}
+           <Link to="/Lobby"><img src={playImg} /></Link>
         </form>
-
-        <div id="allthethings">
-
-        <div id="start"><p>START GAME</p></div>
-        <div id="instructions"><p>INSTRUCTIONS</p></div>
-        <div id="options"><p>CREDITS</p></div>
-
-        <div id="exit"></div>
-        <div id="circle"></div>
-
         </div>
+       
     </div>
+    </section>
+</div>
+
 
     )
 }

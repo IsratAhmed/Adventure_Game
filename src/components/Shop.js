@@ -1,14 +1,25 @@
 import {Link} from "react-router-dom";
+import './Shop.css';
+import playBtn from "../assets/background/play.png"
+
 
 const Shop = () => {
 
-    return(
-        <>
-            <button><Link to="/Lobby">Back to Lobby</Link></button>
-            <button><Link to="/Battle">Battle</Link></button>
-            <p>Text</p>
-        </>
-    )
+
+        return(
+
+            <section className="shop-section" id="shop">
+                <div className="shop-buttons">
+                    
+
+                    <Link to="/Battle"><img src={playBtn} /></Link>
+    
+                </div>
+    
+            </section>
+    
+        )
+    
 }
 
 export default Shop;

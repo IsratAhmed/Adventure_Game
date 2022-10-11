@@ -57,7 +57,7 @@ const GameContainer = () => {
                 </button>
                 <Routes>
                     <Route path="/Game" element={<Game postGame={postGame}/>}/>
-                    <Route path="/Lobby/:gameId" element={<Lobby games={games} />}/>
+                    <Route path="/Lobby" element={<Lobby games={games} />}/>
                     <Route path="/Shop" element={<Shop />}/>
                     <Route path="/Battle" element={<Battle />}/>
             </Routes>

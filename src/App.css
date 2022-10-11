@@ -68,7 +68,86 @@ section {
 
 }
 
-@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+/* lobby-section  ---> .game-buttons */
+.lobby-section {
+  position: relative;
+  z-index: 0;
+}
+/* lobby-buttons */
+.lobby-buttons {
+  position: absolute;
+  top: 30%;  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.lobby-buttons img {
+  width: 180px;
+  margin: 90px;
+}
+
+/* game-section */
+.game-section {
+  position: relative;
+  z-index: 0;
+}
+/* game-buttons */
+.game-buttons {
+  position: absolute;
+  top: 40%;  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-buttons img {
+  width: 180px;
+  margin: 50px;
+}
+
+/* shop-section */
+.shop-section {
+  position: relative;
+  z-index: 0;
+}
+/* shop-buttons */
+.shop-buttons {
+  position: absolute;
+  top: 20%;  
+  width: 100%;
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+}
+
+.shop-buttons img {
+  width: 180px;
+  margin: 50px;
+}
+
+/* battle-section */
+.battle-section {
+  position: relative;
+  z-index: 0;
+}
+/* battle-buttons */
+.battle-buttons {
+  position: absolute;
+  top: 20%;  
+  width: 100%;
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+}
+
+.battle-buttons img {
+  width: 180px;
+  margin: 50px;
+}
+
 
  
 .footer-top-container {
