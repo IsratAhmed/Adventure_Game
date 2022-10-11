@@ -1,6 +1,25 @@
+import { useState } from "react";
 import {Link} from "react-router-dom";
 
-const Game = () => {
+const Game = ({postPlayer}) => {
+
+    const [statePlayer, setStatePlayer] = useState({
+        name: " ",
+        numberOfWins: 0,
+        hitPoints: 100,
+        gold: 2,
+        weapon: null
+    });
+
+    const handleChange = (event) => {
+        let copiedPlayer = {...statePlayer};
+        copiedPlayer.name = event.target.value;
+        setStatePlayer(copiedPlayer);
+    };
+
+    const handlePlayerSubmit = (event) => {
+        postPlayer(statePlayer)
+    }
 
     return (
         
@@ -10,9 +29,9 @@ const Game = () => {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'}}>
     
-        <form>
-            <input placeholder="Enter name"/>
-            <button> <Link to="/Lobby">Start Game</Link></button>
+        <form onSubmit={handlePlayerSubmit}>
+            <input type="text" placeholder="Enter name" name="name" onChange={handleChange} value={statePlayer.name}/>
+            <button type="Submit"> <Link to="/Lobby">Start Game</Link></button>
         </form>
 
         <div id="allthethings">
