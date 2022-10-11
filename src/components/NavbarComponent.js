@@ -1,6 +1,7 @@
 const NavbarComponent = () => {
 
     return(
+        
         <div className="nav-component">
             <nav className="nav-bar">
                 <details>

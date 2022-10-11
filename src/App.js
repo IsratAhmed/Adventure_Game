@@ -1,9 +1,8 @@
 import Title from './Title';
-// import NavBar from './NavBar';
 import Instructions from './Instructions';
 import GameContainer from './containers/GameContainer';
+import Footer from './Footer';
 import './App.css';
-import Footer from './components/Footer';
 
 import NavbarComponent from './components/NavbarComponent';
 import './NavbarComponent.css';

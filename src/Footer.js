@@ -1,4 +1,4 @@
-import './Footer.css'
+import './App.css'
 import React from "react";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
@@ -18,25 +18,24 @@ const Footer = () => {
 
                         <div className="footer-heading footer 2-legal">
                             <h2>Legal</h2>
-                            <p><a href="#">Terms of Use</a></p>
-                            <p><a href="#">Privacy Policy</a></p>
-                            <p><a href="#">Legal Notices</a></p>
-                            <p><a href="#">Event Rules</a></p>
-                            <p><a href="#">Cookies Policy</a></p>
+                                <p><a href="#">Terms of Use</a></p>
+                                <p><a href="#">Privacy Policy</a></p>
+                                <p><a href="#">Legal Notices</a></p>
+                                <p><a href="#">Event Rules</a></p>
+                                <p><a href="#">Cookies Policy</a></p>
                         </div>
 
                         <div className="footer-heading footer 3-about">
                             <h2>Who we are</h2>
-                            <p><a href="#">Front-end Developers</a></p>
-                            <p><a href="#">Back-end Developers</a></p>
-                            <p><a href="#">Careers</a></p>
-                            <p><a href="#">Partners</a></p>
-
+                                <p><a href="#">Front-end Developers</a></p>
+                                <p><a href="#">Back-end Developers</a></p>
+                                <p><a href="#">Careers</a></p>
+                                <p><a href="#">Partners</a></p>
                         </div>
 
                         <div className="footer-heading footer-email-form">
                             <h2>Newsletter</h2>
-                            <p>Be the first to know about new exciting features, special events and much more!</p>
+                                <p>Be the first to know about new exciting features, special events and much more!</p>
 
                             <div>
                                 <form className="footer-input-btn">
@@ -53,11 +52,8 @@ const Footer = () => {
                                             id="footer-email-btn"
                                         />
                                     </div>
-
                                 </form>
-
                             </div>
-
                         </div>
                     </div>
 
@@ -92,24 +88,15 @@ const Footer = () => {
                                 </a>
                             </ul>
                         </div>
-
                     </div>
                 </div>
             </div>
 
             <div className="footer-bottom">
-                <p>
-                    &copy;{new Date().getFullYear()} | SO:CT. All rights reserved. SO:CT and the SO:CT logo are trademarks of SO:CT in the U.K. and/or other regions.
-                </p>
-
-                <p>
-                    All other trademarks are the property of their respective owners.
-                </p>
+                <p>&copy;{new Date().getFullYear()} | SO:CT. All rights reserved. SO:CT and the SO:CT logo are trademarks of SO:CT in the U.K. and/or other regions.</p>
+                <p>All other trademarks are the property of their respective owners.</p>
             </div>
-
         </>
-
-
     )
 
 }
