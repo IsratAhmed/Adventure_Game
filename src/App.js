@@ -1,3 +1,5 @@
+import {BrowserRouter} from "react-router-dom";
+
 import Title from './Title';
 import Instructions from './Instructions';
 import GameContainer from './containers/GameContainer';
@@ -11,6 +13,7 @@ import './components/Game.css'
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App" 
     style={{ backgroundImage: "url(/3_stormlord.jpeg)", 
     backgroundPosition: 'center',
@@ -34,7 +37,9 @@ function App() {
       <Footer/>
       </footer>
     </div>
+    </BrowserRouter>
   )
+  
 }
 
 export default App;

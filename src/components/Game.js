@@ -2,7 +2,7 @@ import { useState } from "react";
 import {Link} from "react-router-dom";
 import PlayerList from "../components/PlayerList";
 
-const Game = ({postPlayer}) => {
+const Game = ({postGame}) => {
 
     const [statePlayer, setStatePlayer] = useState({
         name: "",
@@ -24,14 +24,12 @@ const Game = ({postPlayer}) => {
     const handlePlayerSubmit = (event) => {
         event.preventDefault();
         // postPlayer(statePlayer);
-        postPlayer(statePlayerName);
+        postGame(statePlayerName);
     }
 
     const handleFormSubmit = (event) => {
         event.preventDefault()
-        postPlayer(statePlayer)
-
-
+        postGame(statePlayer)
     }
 
     return (
@@ -44,8 +42,8 @@ const Game = ({postPlayer}) => {
     
         <form onSubmit={handlePlayerSubmit}>
             <input type="text" placeholder="Enter name" name="name" onChange={handleChange} value={statePlayerName}/>
-            <button type="Submit">Add Name</button>
-            <button> <Link to="/Lobby">Start Game</Link></button>   
+            <button type="Submit">Start Game</button>
+            {/* <button> <Link to="/Lobby">Start Game</Link></button>    */}
         </form>
 
         <div id="allthethings">
