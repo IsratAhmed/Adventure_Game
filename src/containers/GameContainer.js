@@ -29,6 +29,19 @@ const GameContainer = () => {
         setPlayers([...players, savedPlayer]);
     }
 
+    const [games, setGames] = useState([]);
+
+    const postGame = async() => {
+        const playerId = playerId[0];
+        const response = await fetch("localhost:8080/games?playerId=" + playerId, {
+            method:"POST", 
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ id: playerId })
+        });
+        const savedGame = await response.json();
+        setGames([...games, savedGame]);
+    }
+
     return (
         <BrowserRouter>
         <div>

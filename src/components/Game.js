@@ -36,7 +36,8 @@ const Game = ({postPlayer}) => {
     
         <form onSubmit={handlePlayerSubmit}>
             <input type="text" placeholder="Enter name" name="name" onChange={handleChange} value={statePlayerName}/>
-            <button type="Submit"> <Link to="/Lobby">Start Game</Link></button>
+            <button type="Submit">Add Name</button>
+            <button> <Link to="/Lobby">Start Game</Link></button>
         </form>
 
         <div id="allthethings">
