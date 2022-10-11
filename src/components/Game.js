@@ -4,21 +4,23 @@ import {Link} from "react-router-dom";
 const Game = ({postPlayer}) => {
 
     const [statePlayer, setStatePlayer] = useState({
-        name: " ",
-        numberOfWins: 0,
-        hitPoints: 100,
-        gold: 2,
-        weapon: null
+        name: "",
+        // numberOfWins: 0,
+        // hitPoints: 100,
+        // gold: 2,
+        // weapon: null
     });
 
     const handleChange = (event) => {
+        // let propertyName = event.target.name;
         let copiedPlayer = {...statePlayer};
         copiedPlayer.name = event.target.value;
         setStatePlayer(copiedPlayer);
     };
 
     const handlePlayerSubmit = (event) => {
-        postPlayer(statePlayer)
+        event.preventDefault();
+        postPlayer(statePlayer);
     }
 
     return (

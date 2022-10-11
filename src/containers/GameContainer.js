@@ -4,6 +4,7 @@ import Shop from "../components/Shop";
 import Battle from "../components/Battle";
 import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
 import { useEffect, useState } from "react";
+
 const GameContainer = () => {
     
     const [players, setPlayers] = useState([]);
@@ -43,4 +44,5 @@ const GameContainer = () => {
         </BrowserRouter>
     )
 }
+
 export default GameContainer;
