@@ -14,11 +14,7 @@ import './components/Game.css'
 function App() {
   return (
     <BrowserRouter>
-    <div className="App" 
-    style={{ backgroundImage: "url(/3_stormlord.jpeg)", 
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat'}}>
+    <div className="App">
       
       <header>
         {/* <NavBar /> */}

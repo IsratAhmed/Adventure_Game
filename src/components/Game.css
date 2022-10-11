@@ -29,4 +29,9 @@
   display: none;
 }
 
-
+.game-section #newplayer-button {
+  border: none;
+  background-color: transparent;  
+  min-height: 20px;
+  width: 50%;
+}

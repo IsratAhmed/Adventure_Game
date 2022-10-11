@@ -6,6 +6,8 @@ import playImg from "../assets/background/play.png";
 
 const Game = ({postGame}) => {
 
+    // const navigate = useNavigate();
+
     const [statePlayer, setStatePlayer] = useState({
         name: "",
         // numberOfWins: 0,
@@ -43,16 +45,12 @@ const Game = ({postGame}) => {
         backgroundRepeat: 'no-repeat'}}>
             
     <section className="game-section" id="game">
-        <div className="game-buttons">
-            <div className="inputBox">
-        <form onSubmit={handlePlayerSubmit}>
+        {/* <div className="game-buttons"> */}
+        <form>
             <input type="text" placeholder="Enter name" name="name" onChange={handleChange} value={statePlayerName} required = "required"/>
-            <button type="Submit">Start Game</button>
-           <Link to="/Lobby"><img src={playImg} /></Link>
+            <Link to="/Lobby"><img src={playImg} id="newplayer-button" onClick={handlePlayerSubmit}/></Link>
         </form>
-        </div>
-       
-    </div>
+       {/* </div> */}
     </section>
 </div>
 

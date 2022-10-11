@@ -39,8 +39,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
+header {
+  background-color: #200f0c;
+}
+
 h1 {
-  color: red;
+  color: white;
   font-family: "MedievalSharp";
 }
 
@@ -52,6 +56,7 @@ ul li {
 div.instructionContainer {
   text-align: center;
   color: white;
+  font-family: "MedievalSharp"
 }
 
 ol.OL{
