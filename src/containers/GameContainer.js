@@ -21,7 +21,7 @@ const GameContainer = () => {
     const postPlayer = async(newPlayerName) => {
         // const newPlayerName = newPlayer.name;
         const response = await fetch("http://localhost:8080/players?name=" + newPlayerName, {
-            method:"POST", 
+             method:"POST", 
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({ name: newPlayerName })
         });
@@ -44,15 +44,15 @@ const GameContainer = () => {
 
     return (
         <BrowserRouter>
-        <div>
-            <button>
-                <Link to="/Game">Play</Link>
-            </button>
-            <Routes>
-                <Route path="/Game" element={<Game postPlayer={postPlayer}/>}/>
-                <Route path="/Lobby" element={<Lobby />}/>
-                <Route path="/Shop" element={<Shop />}/>
-                <Route path="/Battle" element={<Battle />}/>
+            <div>
+                <button>
+                    <Link to="/Game">Play</Link>
+                </button>
+                <Routes>
+                    <Route path="/Game" element={<Game postPlayer={postPlayer}/>}/>
+                    <Route path="/Lobby" element={<Lobby />}/>
+                    <Route path="/Shop" element={<Shop />}/>
+                    <Route path="/Battle" element={<Battle />}/>
             </Routes>
         </div>
         </BrowserRouter>
