@@ -11,7 +11,7 @@ const Footer = () => {
 
                 <div className="footer">
                     <div className="footer-top-1-logo">
-                        <img className="company-logo" src="https://upload.wikimedia.org/wikipedia/commons/3/37/Game_%28rapper%29_Logo.png" alt="company logo" height="70px" />
+                        <img className="company-logo" src="/logo.png" alt="company logo" height="70px" />
                     </div>
 
                     <div className='footer-content'>

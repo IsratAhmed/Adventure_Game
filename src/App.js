@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import NavbarComponent from './components/NavbarComponent';
 import './NavbarComponent.css';
 
+import './components/Game.css'
+
 function App() {
   return (
     <div className="App" 
