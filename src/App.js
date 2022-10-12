@@ -1,4 +1,4 @@
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter, Link, Routes, Route} from "react-router-dom";
 
 import Title from './Title';
 import Instructions from './Instructions';
@@ -21,7 +21,10 @@ function App() {
         <NavbarComponent/>
         <Title />
         <Instructions />
+        
+
       </header>
+      {/* <hr className="GameWindow-border"/> */}
 
       <main>
         <section>
@@ -29,9 +32,12 @@ function App() {
         </section>
       </main>
 
+      {/* <hr className="GameWindow-border"/> */}
+
       <footer>
-      <Footer/>
+       <Footer/>
       </footer>
+      
     </div>
     </BrowserRouter>
   )

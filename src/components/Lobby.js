@@ -2,10 +2,15 @@ import {Link} from "react-router-dom";
 import './Lobby.css';
 import battleBtn from "../assets/btn/battle_btn.png"
 import shopBtn from "../assets/btn/shop_btn2.png"
+import {useState} from "react";
 
-const Lobby = ({games}) => {
+const Lobby = ({games, startLevel1}) => {
 
     // const welcomeMessage = messages[0];
+
+    const handleStartGame = (event) => {
+        startLevel1();
+    }
 
     return(
 
@@ -13,7 +18,7 @@ const Lobby = ({games}) => {
             <div className="lobby-buttons">
                 
                 <Link to="/Shop"><img src={shopBtn} /></Link>
-                <Link to="/Battle"><img src={battleBtn} /></Link>
+                <Link to="/Battle"><img src={battleBtn} onClick={handleStartGame}/></Link>
 
             </div>
             {/* <h4>{welcomeMessage}</h4> */}

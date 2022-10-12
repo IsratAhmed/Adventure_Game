@@ -2,20 +2,20 @@ import {Link} from "react-router-dom";
 import './Shop.css';
 import WeaponList from "./WeaponList";
 import battleBtn from "../assets/btn/battle_btn.png"
+import {useState} from "react";
 
-const Shop = ({shop, buyWeapon, activePlayer}) => {
+const Shop = ({shop, buyWeapon, activePlayer, startLevel1}) => {
 
-    // const returnPlayerGold = (playerName) => {
-    //     const playerIndex = players.findIndex(player => player.name === playerName)
-    //     return players[playerIndex].gold;
-    // }
+    const handleStartGame = (event) => {
+        startLevel1();
+    }
 
         return(
 
             <section className="shop-section" id="shop">
                 <div className="shop-buttons">
 
-                    <Link to="/Battle"><img src={battleBtn} /></Link>
+                    <Link to="/Battle"><img src={battleBtn} onClick={handleStartGame}/></Link>
     
                 </div>
             

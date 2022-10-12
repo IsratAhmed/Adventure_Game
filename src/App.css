@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.GameWindow-border {
+  height: 50px;
+  background-color: black;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -41,6 +46,7 @@
 
 header {
   background-color: #200f0c;
+  padding-bottom: 50px;
 }
 
 h1 {
@@ -176,6 +182,7 @@ input[name="name"] {
   bottom: 57px;
   width: 100%;
   margin: 0;
+  padding-top: 50px;
 }
   
 .footer-content{
