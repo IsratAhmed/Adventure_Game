@@ -9,10 +9,8 @@ const PlayerList = ({players}) => {
 
             />
                 
-    })
+    });
 
-    
-    
     return (
         <>
             <h3>List of Players</h3>
@@ -20,7 +18,6 @@ const PlayerList = ({players}) => {
             {playersComponents}
         </>
         
-
     )
 
 }
