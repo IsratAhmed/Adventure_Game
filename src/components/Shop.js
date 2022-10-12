@@ -3,7 +3,7 @@ import './Shop.css';
 import WeaponList from "./WeaponList";
 import battleBtn from "../assets/btn/battle_btn.png"
 
-const Shop = ({shop, buyWeapon}) => {
+const Shop = ({shop, buyWeapon, activePlayer}) => {
 
     // const returnPlayerGold = (playerName) => {
     //     const playerIndex = players.findIndex(player => player.name === playerName)
@@ -20,6 +20,7 @@ const Shop = ({shop, buyWeapon}) => {
                 </div>
             
             <h2 id="shop-name">{shop.shopName}</h2>
+            <h4>Player's gold: {activePlayer.gold}</h4>
             {/* <h3>{playerName} {returnPlayerGold}</h3> */}
             <WeaponList shop={shop} buyWeapon={buyWeapon}/>
 

@@ -101,13 +101,13 @@ const GameContainer = () => {
                 <Routes>
                     <Route path="/Game" element={<Game postGame={postGame}/>}/>
                     <Route path="/Lobby" element={<Lobby games={games}/>}/>
-                    <Route path="/Shop" element={<Shop shop={shop} buyWeapon={buyWeapon}/>}/>
+                    <Route path="/Shop" element={<Shop shop={shop} buyWeapon={buyWeapon} activePlayer={activePlayer}/>}/>
                     <Route path="/Battle" element={<Battle />}/>
                 </Routes>
                 <div className="log">
-                    {messages.map((message) => {
+                    {messages.map((message, index) => {
                         return (
-                            <li key={message.id}>{message}</li>
+                            <li key={index}>{message}</li>
                         )})}
                 </div>
         </div>

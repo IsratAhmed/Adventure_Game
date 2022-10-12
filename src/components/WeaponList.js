@@ -3,7 +3,7 @@ import Weapon from "./Weapon";
 const WeaponList = ({shop, buyWeapon}) => {
 
     const availableWeapons = shop.weapons.filter((weapon) => {
-        return !weapon.player 
+        return !weapon.player; 
     })
 
     const weaponItems = availableWeapons.map((weapon) => {
