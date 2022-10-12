@@ -17,14 +17,15 @@ const GameContainer = () => {
         setPlayers(jsonData);
     };
 
-    // const fetchPlayerById = async() => {
-    //     const response = await fetch("http://localhost:8080/players/" + activePlayer.id);
-    //     const jsonData = await response.json();
-    //     setActivePlayer(jsonData);
-    // };
+    const fetchPlayerById = async() => {
+        const response = await fetch("http://localhost:8080/players/" + activePlayer.id);
+        const jsonData = await response.json();
+        setActivePlayer(jsonData);
+    };
 
     useEffect(() => {
         fetchPlayersData();
+        // fetchPlayerById();
         fetchShopData();
     }, []);
 
@@ -74,6 +75,7 @@ const GameContainer = () => {
     };
 
     const buyWeapon = async (weaponId) => {
+        console.log(weaponId);
         const response = await fetch(`http://localhost:8080/players?playerId=${activePlayer.id}&weaponId=${weaponId}`, {
             method:"PATCH", 
             headers: {'Content-Type': 'application/json'},
@@ -83,8 +85,10 @@ const GameContainer = () => {
         const copiedMessages = [...messages, buyingMessage.message]
         setMessages(copiedMessages);
         fetchPlayersData();
-        // fetchPlayerById();
+        fetchPlayerById();
+
         // setActivePlayer(activePlayer);
+        // setActivePlayer();
     }
 
     return (
