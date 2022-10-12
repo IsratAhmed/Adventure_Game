@@ -15,8 +15,8 @@ const Battle = () => {
         <section className="battle-section" id="battle">
             <div className="battle-buttons">
                 
-                <Link to="#"><img src={attackBtn} onClick={attackMonster}/></Link>
-                <Link to="/Lobby"><img src={contBtn} /></Link>
+                <Link to="#"><img id="attack-btn"src={attackBtn} onClick={attackMonster}/></Link>
+                <Link to="/Lobby"><img id="battle-continue-btn" src={contBtn} /></Link>
 
             </div>
 

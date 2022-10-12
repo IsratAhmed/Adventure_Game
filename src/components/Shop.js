@@ -15,7 +15,7 @@ const Shop = ({shop, buyWeapon, activePlayer, startLevel1}) => {
             <section className="shop-section" id="shop">
                 <div className="shop-buttons">
 
-                    <Link to="/Battle"><img src={battleBtn} onClick={handleStartGame}/></Link>
+                    <Link to="/Battle"><img id="shop-battle-btn" src={battleBtn} onClick={handleStartGame}/></Link>
     
                 </div>
             

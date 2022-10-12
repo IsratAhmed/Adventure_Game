@@ -48,3 +48,16 @@
   color: white;
   font-family: "MedievalSharp";
 }
+
+/* Shop to battle button*/
+
+#shop-battle-btn:hover {
+  transform: scale(1.05) ;
+  filter: drop-shadow(0 1mm 1mm rgb(0, 0,0.19));
+}
+
+/* gives button the effect of being clicked */
+#shop-battle-btn:active {
+  filter: drop-shadow(0 1mm 1mm rgb(0, 0,0.19));
+  transform: translateY(2px);
+}

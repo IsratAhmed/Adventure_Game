@@ -57,7 +57,7 @@
 
 /* gives name input field a border */
 .game-section input:focus {
-    border: 1.4px solid gold;
-    width: 300px;
-    transition: 0.5s ease-in-out;
-   }
+  border: 1.4px solid gold;
+  width: 300px;
+  transition: 0.5s ease-in-out;
+}

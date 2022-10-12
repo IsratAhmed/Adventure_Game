@@ -17,8 +17,8 @@ const Lobby = ({games, startLevel1}) => {
         <section className="lobby-section" id="lobby">
             <div className="lobby-buttons">
                 
-                <Link to="/Shop"><img src={shopBtn} /></Link>
-                <Link to="/Battle"><img src={battleBtn} onClick={handleStartGame}/></Link>
+                <Link to="/Shop"><img id="to-shop-btn" src={shopBtn} /></Link>
+                <Link to="/Battle"><img id="to-battle-btn" src={battleBtn} onClick={handleStartGame}/></Link>
 
             </div>
             {/* <h4>{welcomeMessage}</h4> */}
