@@ -9,26 +9,36 @@ const GameContainer = () => {
     const navigate = useNavigate();
     
     const [players, setPlayers] = useState([]);
+    const [activePlayer, setActivePlayer] = useState(null);
+
     const fetchPlayersData = async() => {
         const response = await fetch("http://localhost:8080/players");
         const jsonData = await response.json();
         setPlayers(jsonData);
     };
 
+    const fetchPlayerById = async() => {
+        const response = await fetch("http://localhost:8080/players/" + activePlayer.id);
+        const jsonData = await response.json();
+        setActivePlayer(jsonData);
+    };
+
     useEffect(() => {
         fetchPlayersData();
+        fetchShopData();
     }, []);
 
     const postPlayer = async(newPlayerName) => {
         // const newPlayerName = newPlayer.name;
         const response = await fetch("http://localhost:8080/players?name=" + newPlayerName, {
-             method:"POST", 
+            method:"POST", 
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({ name: newPlayerName })
         });
         const savedPlayer = await response.json();
         setPlayers([...players, savedPlayer]);
-        return savedPlayer
+        setActivePlayer(savedPlayer);
+        return savedPlayer;
     }
 
     const [games, setGames] = useState([]);
@@ -55,6 +65,26 @@ const GameContainer = () => {
         setMessages(copiedMessages);
     }
 
+    const [shop, setShop] = useState([]);
+    const fetchShopData = async() => {
+        const response = await fetch("http://localhost:8080/shops");
+        const jsonData = await response.json();
+        setShop(jsonData[0]);
+    };
+
+    const buyWeapon = async (weaponId) => {
+        const response = await fetch(`http://localhost:8080/players?playerId=${activePlayer.id}&weaponId=${weaponId}`, {
+            method:"PATCH", 
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ id: activePlayer.id })
+        })
+        const buyingMessage = await response.json();
+        const copiedMessages = [...messages, buyingMessage.message]
+        setMessages(copiedMessages);
+        fetchPlayersData();
+        fetchPlayerById();
+    }
+
     return (
             <div>
                 <button>
@@ -63,7 +93,7 @@ const GameContainer = () => {
                 <Routes>
                     <Route path="/Game" element={<Game postGame={postGame}/>}/>
                     <Route path="/Lobby" element={<Lobby games={games} messages={messages}/>}/>
-                    <Route path="/Shop" element={<Shop />}/>
+                    <Route path="/Shop" element={<Shop shop={shop} buyWeapon={buyWeapon}/>}/>
                     <Route path="/Battle" element={<Battle />}/>
             </Routes>
         </div>

@@ -3,18 +3,19 @@ import {Link} from "react-router-dom";
 import PlayerList from "../components/PlayerList";
 import '../components/Game.css';
 import playImg from "../assets/background/play.png";
+import Shop from "./Shop";
 
 const Game = ({postGame}) => {
 
     // const navigate = useNavigate();
 
-    const [statePlayer, setStatePlayer] = useState({
-        name: "",
-        // numberOfWins: 0,
-        // hitPoints: 100,
-        // gold: 2,
-        // weapon: null
-    });
+    // const [statePlayer, setStatePlayer] = useState({
+    //     name: "",
+    //     // numberOfWins: 0,
+    //     // hitPoints: 100,
+    //     // gold: 2,
+    //     // weapon: null
+    // });
 
     const [statePlayerName, setStatePlayerName] = useState("");
 
@@ -31,12 +32,6 @@ const Game = ({postGame}) => {
         postGame(statePlayerName);
     }
 
-    const handleFormSubmit = (event) => {
-        event.preventDefault()
-        postGame(statePlayer)
-    }
-
-
     return (
         
         <div className = "startGame" 
@@ -49,6 +44,7 @@ const Game = ({postGame}) => {
         {/* <div className="game-buttons"> */}
         <form>
             <input type="text" placeholder="Enter name" name="name" onChange={handleChange} value={statePlayerName} required = "required"/>
+            {/* <Shop playerName={statePlayerName}/> */}
             <Link to="/Lobby"><img src={playImg} id="newplayer-button" onClick={handlePlayerSubmit}/></Link>
         </form>
        {/* </div> */}

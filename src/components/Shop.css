@@ -12,3 +12,33 @@
       background-size:contain;
   
   }
+
+.weapon-list {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+  display: flex;
+  flex-direction: column;
+}
+
+.hide {
+  display: none;
+  color: white;
+}
+
+.weapon-list button {
+  padding: 30px;
+  /* display: flex;
+  flex-direction: column; */
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; */
+}
+
+.weapon-list button:hover + .hide {
+  display: block;
+  /* color: red; */
+}
+
+#shop-name {
+  color: white;
+  font-family: "MedievalSharp";
+}
