@@ -52,8 +52,10 @@ const GameContainer = () => {
         if(playerIndex === -1) {
             // player does not exist
             player  = await postPlayer(newPlayerName);
-            // setActivePlayer(player);
-        } else player = players[playerIndex]
+        } else {
+            player = players[playerIndex];
+            setActivePlayer(player);
+        }
         const response = await fetch("http://localhost:8080/games?playerId=" + player.id, {
             method:"POST", 
             headers: {'Content-Type': 'application/json'},
@@ -105,7 +107,7 @@ const GameContainer = () => {
                 <div className="log">
                     {messages.map((message) => {
                         return (
-                            <li>{message}</li>
+                            <li key={message.id}>{message}</li>
                         )})}
                 </div>
         </div>
