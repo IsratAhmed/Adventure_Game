@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import './Shop.css';
-import playBtn from "../assets/background/play.png"
+import battleBtn from "../assets/btn/battle_btn.png"
 
 
 const Shop = () => {
@@ -12,7 +12,7 @@ const Shop = () => {
                 <div className="shop-buttons">
                     
 
-                    <Link to="/Battle"><img src={playBtn} /></Link>
+                    <Link to="/Battle"><img src={battleBtn} /></Link>
     
                 </div>
     

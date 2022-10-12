@@ -73,6 +73,21 @@ section {
 
 }
 
+input[name="name"] {
+  border:none;
+  outline:none;
+  display:inline-block;
+  height:40px;
+  vertical-align:middle;
+  position:relative;
+  bottom:30px;
+  right:9px;
+  border-radius:22px;
+  width:220px;
+  box-sizing:border-box;
+  padding:0 18px; 
+}
+
 /* lobby-section  ---> .game-buttons */
 .lobby-section {
   position: relative;
@@ -141,7 +156,7 @@ section {
 /* battle-buttons */
 .battle-buttons {
   position: absolute;
-  top: 20%;  
+  top: 25%;  
   width: 100%;
   display: flex;
   justify-content:flex-end;

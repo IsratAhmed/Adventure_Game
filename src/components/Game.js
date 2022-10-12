@@ -2,7 +2,7 @@ import { useState } from "react";
 import {Link} from "react-router-dom";
 import PlayerList from "../components/PlayerList";
 import '../components/Game.css';
-import playImg from "../assets/background/play.png";
+import playImg from "../assets/btn/play_btn.png";
 
 const Game = ({postGame}) => {
 
