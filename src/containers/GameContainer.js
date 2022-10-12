@@ -33,6 +33,8 @@ const GameContainer = () => {
 
     const [games, setGames] = useState([]);
 
+    const [messages, setMessages] = useState([]);
+
     const postGame = async(newPlayerName) => {
         const playerIndex = players.findIndex(player => player.name === newPlayerName)
         let player
@@ -48,6 +50,9 @@ const GameContainer = () => {
         const savedGame = await response.json();
         setGames([...games, savedGame]);
         navigate(`/Lobby`);
+        // getting the Welcome Message
+        const copiedMessages = [...messages, savedGame.message]
+        setMessages(copiedMessages);
     }
 
     return (
@@ -57,7 +62,7 @@ const GameContainer = () => {
                 </button>
                 <Routes>
                     <Route path="/Game" element={<Game postGame={postGame}/>}/>
-                    <Route path="/Lobby" element={<Lobby games={games} />}/>
+                    <Route path="/Lobby" element={<Lobby games={games} messages={messages}/>}/>
                     <Route path="/Shop" element={<Shop />}/>
                     <Route path="/Battle" element={<Battle />}/>
             </Routes>

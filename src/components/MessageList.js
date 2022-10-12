@@ -1,4 +1,12 @@
-const MessageList = () => {
+// import { useState } from "react";
+
+const MessageList = ({}) => {
+
+    return(
+        <>
+
+        </>
+    );
 
 
 }

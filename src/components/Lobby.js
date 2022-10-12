@@ -3,7 +3,9 @@ import './Lobby.css';
 
 import playBtn from "../assets/background/play.png"
 
-const Lobby = () => {
+const Lobby = ({games, messages}) => {
+
+    const welcomeMessage = messages[0];
 
     return(
 
@@ -14,7 +16,7 @@ const Lobby = () => {
                 <Link to="/Battle"><img src={playBtn} /></Link>
 
             </div>
-
+            <h4>{welcomeMessage}</h4>
         </section>
 
     )

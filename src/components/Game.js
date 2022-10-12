@@ -36,6 +36,7 @@ const Game = ({postGame}) => {
         postGame(statePlayer)
     }
 
+
     return (
         
         <div className = "startGame" 
