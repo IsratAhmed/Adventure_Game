@@ -25,7 +25,7 @@ const GameContainer = () => {
 
     useEffect(() => {
         fetchPlayersData();
-        fetchPlayerById();
+        // fetchPlayerById();
         fetchShopData();
     }, []);
 
@@ -86,6 +86,7 @@ const GameContainer = () => {
         setMessages(copiedMessages);
         fetchPlayersData();
         fetchPlayerById();
+
         // setActivePlayer(activePlayer);
         // setActivePlayer();
     }
