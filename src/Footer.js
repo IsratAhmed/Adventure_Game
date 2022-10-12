@@ -17,7 +17,7 @@ const Footer = () => {
                     <div className='footer-content'>
 
                         <div className="footer-heading footer 2-legal">
-                            <h2>Legal</h2>
+                            <h2><u>Legal</u></h2>
                                 <p><a href="#">Terms of Use</a></p>
                                 <p><a href="#">Privacy Policy</a></p>
                                 <p><a href="#">Legal Notices</a></p>
@@ -26,7 +26,7 @@ const Footer = () => {
                         </div>
 
                         <div className="footer-heading footer 3-about">
-                            <h2>Who we are</h2>
+                            <h2><u>Who we are</u></h2>
                                 <p><a href="#">Front-end Developers</a></p>
                                 <p><a href="#">Back-end Developers</a></p>
                                 <p><a href="#">Careers</a></p>
@@ -34,7 +34,7 @@ const Footer = () => {
                         </div>
 
                         <div className="footer-heading footer-email-form">
-                            <h2>Newsletter</h2>
+                            <h2><u>Newsletter</u></h2>
                                 <p>Be the first to know about new exciting features, special events and much more!</p>
 
                             <div>
