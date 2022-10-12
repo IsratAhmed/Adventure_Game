@@ -1,7 +1,11 @@
 import {Link} from "react-router-dom";
 import './Shop.css';
+<<<<<<< HEAD
 import playBtn from "../assets/background/play.png"
 import WeaponList from "./WeaponList";
+=======
+import battleBtn from "../assets/btn/battle_btn.png"
+>>>>>>> mc-game
 
 
 const Shop = ({shop, buyWeapon}) => {
@@ -15,8 +19,14 @@ const Shop = ({shop, buyWeapon}) => {
 
             <section className="shop-section" id="shop">
                 <div className="shop-buttons">
+<<<<<<< HEAD
                 
                     <Link to="/Battle"><img src={playBtn} /></Link>
+=======
+                    
+
+                    <Link to="/Battle"><img src={battleBtn} /></Link>
+>>>>>>> mc-game
     
                 </div>
             

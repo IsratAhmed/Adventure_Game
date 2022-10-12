@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 import './Lobby.css';
-
-import playBtn from "../assets/background/play.png"
+import battleBtn from "../assets/btn/battle_btn.png"
+import shopBtn from "../assets/btn/shop_btn2.png"
 
 const Lobby = ({games, messages}) => {
 
@@ -12,8 +12,8 @@ const Lobby = ({games, messages}) => {
         <section className="lobby-section" id="lobby">
             <div className="lobby-buttons">
                 
-                <Link to="/Shop"><img src={playBtn} /></Link>
-                <Link to="/Battle"><img src={playBtn} /></Link>
+                <Link to="/Shop"><img src={shopBtn} /></Link>
+                <Link to="/Battle"><img src={battleBtn} /></Link>
 
             </div>
             <h4>{welcomeMessage}</h4>

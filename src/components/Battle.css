@@ -8,7 +8,8 @@
     flex-direction: column;
     gap: 30px;
     background-image: url('/src/assets/background/battle_bg.png');
-      background-repeat: repeat;
-      background-size:contain;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    background-size: cover;
   
   }
