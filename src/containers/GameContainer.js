@@ -94,10 +94,16 @@ const GameContainer = () => {
                 </button>
                 <Routes>
                     <Route path="/Game" element={<Game postGame={postGame}/>}/>
-                    <Route path="/Lobby" element={<Lobby games={games} messages={messages}/>}/>
+                    <Route path="/Lobby" element={<Lobby games={games}/>}/>
                     <Route path="/Shop" element={<Shop shop={shop} buyWeapon={buyWeapon}/>}/>
                     <Route path="/Battle" element={<Battle />}/>
-            </Routes>
+                </Routes>
+                <div className="log">
+                    {messages.map((message) => {
+                        return (
+                            <li>{message}</li>
+                        )})}
+                </div>
         </div>
     )
 }

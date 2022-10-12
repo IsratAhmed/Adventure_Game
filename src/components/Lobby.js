@@ -3,9 +3,9 @@ import './Lobby.css';
 import battleBtn from "../assets/btn/battle_btn.png"
 import shopBtn from "../assets/btn/shop_btn2.png"
 
-const Lobby = ({games, messages}) => {
+const Lobby = ({games}) => {
 
-    const welcomeMessage = messages[0];
+    // const welcomeMessage = messages[0];
 
     return(
 
@@ -16,7 +16,7 @@ const Lobby = ({games, messages}) => {
                 <Link to="/Battle"><img src={battleBtn} /></Link>
 
             </div>
-            <h4>{welcomeMessage}</h4>
+            {/* <h4>{welcomeMessage}</h4> */}
         </section>
 
     )
