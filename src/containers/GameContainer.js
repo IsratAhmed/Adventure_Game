@@ -17,11 +17,11 @@ const GameContainer = () => {
         setPlayers(jsonData);
     };
 
-    const fetchPlayerById = async() => {
-        const response = await fetch("http://localhost:8080/players/" + activePlayer.id);
-        const jsonData = await response.json();
-        setActivePlayer(jsonData);
-    };
+    // const fetchPlayerById = async() => {
+    //     const response = await fetch("http://localhost:8080/players/" + activePlayer.id);
+    //     const jsonData = await response.json();
+    //     setActivePlayer(jsonData);
+    // };
 
     useEffect(() => {
         fetchPlayersData();
@@ -51,6 +51,7 @@ const GameContainer = () => {
         if(playerIndex === -1) {
             // player does not exist
             player  = await postPlayer(newPlayerName);
+            // setActivePlayer(player);
         } else player = players[playerIndex]
         const response = await fetch("http://localhost:8080/games?playerId=" + player.id, {
             method:"POST", 
@@ -82,7 +83,8 @@ const GameContainer = () => {
         const copiedMessages = [...messages, buyingMessage.message]
         setMessages(copiedMessages);
         fetchPlayersData();
-        fetchPlayerById();
+        // fetchPlayerById();
+        // setActivePlayer(activePlayer);
     }
 
     return (
