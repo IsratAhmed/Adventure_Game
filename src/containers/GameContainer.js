@@ -123,7 +123,12 @@ const GameContainer = () => {
                 <div className="log">
                     {messages.map((message, index) => {
                         return (
+                            <>
+                            <h5><em>Adventure Scroll:</em></h5>
                             <li key={index}>{message}</li>
+                            </>
+                        
+                            
                         )})}
                 </div>
         </div>

@@ -4,6 +4,13 @@
   text-align: center;
 }
 
+.log  {
+  border: 3px double black;
+  height:80px; width:auto;
+  overflow:hidden; overflow-y:scroll;
+
+}
+
 .GameWindow-border {
   height: 50px;
   background-color: black;
@@ -65,9 +72,14 @@ div.instructionContainer {
   font-family: "MedievalSharp"
 }
 
+.instructionContainer h3 {
+  font-size: 22px;
+}
+
 ol.OL{
   display: inline-block;
   text-align: left;
+  font-size: 16px;
 }
 
 section {
@@ -76,6 +88,16 @@ section {
 
 .instructionContainer {
   height: 100%;
+
+}
+
+.instructionContainer hr {
+  display: block;
+  height: 30px;
+  margin: auto 200px;
+  border-style: solid;
+  border-color: goldenrod;
+  border-width: 0 0 0.2px 0;
 
 }
 
@@ -279,7 +301,7 @@ input[name="name"] {
 .footer-social hr {
   display: block;
   height: 30px;
-  margin: auto 200px;
+  margin: auto 100px;
   border:none;
   border-style: solid;
   border-color: goldenrod;
