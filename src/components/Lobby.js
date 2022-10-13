@@ -4,12 +4,21 @@ import battleBtn from "../assets/btn/battle_btn.png"
 import shopBtn from "../assets/btn/shop_btn2.png"
 import {useState} from "react";
 import Hero from '../components/Hero_sprite.js';  
-const Lobby = ({games, startLevel1}) => {
+
+
+const Lobby = ({activePlayer, startLevel1, startLevel2, startLevel3}) => {
+
 
     // const welcomeMessage = messages[0];
 
     const handleStartGame = (event) => {
-        startLevel1();
+        if (activePlayer.numberOfWins === 0) {
+            startLevel1();
+        } else if (activePlayer.numberOfWins === 1) {
+            startLevel2();
+        } else {
+            startLevel3();
+        }
     }
 
     return(
@@ -18,6 +27,7 @@ const Lobby = ({games, startLevel1}) => {
             <div className="lobby-buttons">
                 
                 <Link to="/Shop"><img id="to-shop-btn" src={shopBtn} /></Link>
+                <h4>Make sure you have a weapon before going to the battle</h4>
                 <Link to="/Battle"><img id="to-battle-btn" src={battleBtn} onClick={handleStartGame}/></Link>
 
             </div>

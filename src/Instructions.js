@@ -2,6 +2,7 @@ const Instructions = () => {
 
     return (
         <div className="instructionContainer">
+            <hr />
             <h3>Instructions: </h3>
             <ol className="OL">
                 <li>Enter your name in the text box provided</li>
