@@ -3,7 +3,7 @@ import './Lobby.css';
 import battleBtn from "../assets/btn/battle_btn.png"
 import shopBtn from "../assets/btn/shop_btn2.png"
 import {useState} from "react";
-
+import Hero from '../components/Hero_sprite.js';  
 const Lobby = ({games, startLevel1}) => {
 
     // const welcomeMessage = messages[0];
@@ -20,6 +20,9 @@ const Lobby = ({games, startLevel1}) => {
                 <Link to="/Shop"><img id="to-shop-btn" src={shopBtn} /></Link>
                 <Link to="/Battle"><img id="to-battle-btn" src={battleBtn} onClick={handleStartGame}/></Link>
 
+            </div>
+            <div>
+                <Hero/>
             </div>
             {/* <h4>{welcomeMessage}</h4> */}
         </section>
