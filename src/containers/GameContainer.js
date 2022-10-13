@@ -2,22 +2,23 @@ import Game from "../components/Game";
 import Lobby from "../components/Lobby";
 import Shop from "../components/Shop";
 import Battle from "../components/Battle";
-import {Routes, Route, Link, useNavigate, Navigate} from "react-router-dom";
+import Battle_2 from "../components/Battle_2";
+import { Routes, Route, Link, useNavigate, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const GameContainer = () => {
     const navigate = useNavigate();
-    
+
     const [players, setPlayers] = useState([]);
     const [activePlayer, setActivePlayer] = useState(null);
 
-    const fetchPlayersData = async() => {
+    const fetchPlayersData = async () => {
         const response = await fetch("http://localhost:8080/players");
         const jsonData = await response.json();
         setPlayers(jsonData);
     };
 
-    const fetchPlayerById = async() => {
+    const fetchPlayerById = async () => {
         const response = await fetch("http://localhost:8080/players/" + activePlayer.id);
         const jsonData = await response.json();
         setActivePlayer(jsonData);
@@ -29,11 +30,11 @@ const GameContainer = () => {
         fetchShopData();
     }, []);
 
-    const postPlayer = async(newPlayerName) => {
+    const postPlayer = async (newPlayerName) => {
         // const newPlayerName = newPlayer.name;
         const response = await fetch("http://localhost:8080/players?name=" + newPlayerName, {
-            method:"POST", 
-            headers: {'Content-Type': 'application/json'},
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name: newPlayerName })
         });
         const savedPlayer = await response.json();
@@ -47,19 +48,19 @@ const GameContainer = () => {
     const [messages, setMessages] = useState([]);
     const reversedMessages = messages.slice().reverse();
 
-    const postGame = async(newPlayerName) => {
+    const postGame = async (newPlayerName) => {
         const playerIndex = players.findIndex(player => player.name === newPlayerName)
         let player
-        if(playerIndex === -1) {
+        if (playerIndex === -1) {
             // player does not exist
-            player  = await postPlayer(newPlayerName);
+            player = await postPlayer(newPlayerName);
         } else {
             player = players[playerIndex];
             setActivePlayer(player);
         }
         const response = await fetch("http://localhost:8080/games?playerId=" + player.id, {
-            method:"POST", 
-            headers: {'Content-Type': 'application/json'},
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id: player.id })
         });
         const savedGame = await response.json();
@@ -71,7 +72,7 @@ const GameContainer = () => {
     }
 
     const [shop, setShop] = useState([]);
-    const fetchShopData = async() => {
+    const fetchShopData = async () => {
         const response = await fetch("http://localhost:8080/shops");
         const jsonData = await response.json();
         setShop(jsonData[0]);
@@ -79,8 +80,8 @@ const GameContainer = () => {
 
     const buyWeapon = async (weaponId) => {
         const response = await fetch(`http://localhost:8080/players?playerId=${activePlayer.id}&weaponId=${weaponId}`, {
-            method:"PATCH", 
-            headers: {'Content-Type': 'application/json'},
+            method: "PATCH",
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id: activePlayer.id })
         })
         const buyingMessage = await response.json();
@@ -91,9 +92,9 @@ const GameContainer = () => {
     }
 
     const attackMonsterLevel1 = async () => {
-        const response = await fetch(`http://localhost:8080/games/${activePlayer.id}?battleId=1`,{
-            method:"PATCH", 
-            headers: {'Content-Type': 'application/json'},
+        const response = await fetch(`http://localhost:8080/games/${activePlayer.id}?battleId=1`, {
+            method: "PATCH",
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id: activePlayer.id })
             // game id
         })
@@ -104,9 +105,9 @@ const GameContainer = () => {
         fetchPlayerById();
     }
     const attackMonsterLevel2 = async () => {
-        const response = await fetch(`http://localhost:8080/games/${activePlayer.id}?battleId=2`,{
-            method:"PATCH", 
-            headers: {'Content-Type': 'application/json'},
+        const response = await fetch(`http://localhost:8080/games/${activePlayer.id}?battleId=2`, {
+            method: "PATCH",
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id: activePlayer.id })
             // game id
         })
@@ -117,9 +118,9 @@ const GameContainer = () => {
         fetchPlayerById();
     }
     const attackMonsterLevel3 = async () => {
-        const response = await fetch(`http://localhost:8080/games/${activePlayer.id}?battleId=3`,{
-            method:"PATCH", 
-            headers: {'Content-Type': 'application/json'},
+        const response = await fetch(`http://localhost:8080/games/${activePlayer.id}?battleId=3`, {
+            method: "PATCH",
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id: activePlayer.id })
             // game id
         })
@@ -156,39 +157,44 @@ const GameContainer = () => {
     }
 
     return (
-            <div>
-                <Routes>
-                    <Route path="/Game" element={<Game postGame={postGame}/>}/>
-                    <Route path="/Lobby" element={<Lobby 
-                                                    activePlayer={activePlayer}
-                                                    startLevel1={startLevel1}
-                                                    startLevel2={startLevel2}
-                                                    startLevel3={startLevel3}/>}/>
-                    <Route path="/Shop" element={<Shop 
-                                                    shop={shop} 
-                                                    buyWeapon={buyWeapon} 
-                                                    activePlayer={activePlayer} 
-                                                    startLevel1={startLevel1}
-                                                    startLevel2={startLevel2}
-                                                    startLevel3={startLevel3}/>}/>
-                    <Route path="/Battle" element={<Battle 
-                                                    messages={messages}
-                                                    activePlayer={activePlayer}  
-                                                    attackMonsterLevel1={attackMonsterLevel1}
-                                                    attackMonsterLevel2={attackMonsterLevel2}
-                                                    attackMonsterLevel3={attackMonsterLevel3}/>}/>
-                </Routes>
-                <div className="log">
-                    <h5><em>Adventure Scroll:</em></h5>
-                    <ul>
+        <div>
+            <Routes>
+                <Route path="/Game" element={<Game postGame={postGame} />} />
+                <Route path="/Lobby" element={<Lobby
+                    activePlayer={activePlayer}
+                    startLevel1={startLevel1}
+                    startLevel2={startLevel2}
+                    startLevel3={startLevel3} />} />
+                <Route path="/Shop" element={<Shop
+                    shop={shop}
+                    buyWeapon={buyWeapon}
+                    activePlayer={activePlayer}
+                    startLevel1={startLevel1}
+                    startLevel2={startLevel2}
+                    startLevel3={startLevel3} />} />
+                <Route path="/Battle" element={<Battle
+                    messages={messages}
+                    activePlayer={activePlayer}
+                    attackMonsterLevel1={attackMonsterLevel1}
+                    attackMonsterLevel2={attackMonsterLevel2}
+                    attackMonsterLevel3={attackMonsterLevel3} />} />
+                <Route path="/Battle_2" element={<Battle_2
+                    messages={messages}
+                    activePlayer={activePlayer}
+                    attackMonsterLevel2={attackMonsterLevel2} />} />                
+            </Routes>
+            <div className="log">
+                <h5><em>Adventure Scroll:</em></h5>
+                <ul>
                     {reversedMessages.map((message, index) => {
                         return (
                             <>
-                            <li key={index}>{message}</li>
+                                <li key={index}>{message}</li>
                             </>
-                        )})}
-                    </ul>
-                </div>
+                        )
+                    })}
+                </ul>
+            </div>
         </div>
     )
 }

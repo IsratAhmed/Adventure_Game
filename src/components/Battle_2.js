@@ -1,22 +1,27 @@
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import './Battle.css';
 import attackBtn from "../assets/btn/attack_btn.png"
 import contBtn from "../assets/btn/continue_btn.png"
 
 import Hero_Shop from "./Hero_shop_sprite";
+import Wolf from "..assets/wolf/idle";
+
 const Battle_2 = ({activePlayer, attackMonsterLevel1, attackMonsterLevel2, attackMonsterLevel3}) => {
 
+    const navigate = useNavigate();
+
     const attackMonster = (event) => {
-        if (activePlayer.numberOfWins === 0) {
-            attackMonsterLevel1();
-        } else if (activePlayer.numberOfWins === 1) {
-            attackMonsterLevel2();
-        } else {
-            attackMonsterLevel3();
-        }
-        // http://localhost:8080/games/combat?battleId=1
+        attackMonsterLevel2();
     }
 
+    const endGame = (event) => {
+        event.preventDefault();
+        if (activePlayer.numberOfWins === 1 && activePlayer.hitPoints <= 0) {
+            navigate(`/Game`);
+        } else {
+            navigate(`/Lobby`);
+        }
+    }
 
     return(
 
@@ -24,13 +29,13 @@ const Battle_2 = ({activePlayer, attackMonsterLevel1, attackMonsterLevel2, attac
             <div className="battle-buttons">
                 
                 <Link to="#"><img id="attack-btn"src={attackBtn} onClick={attackMonster}/></Link>
-                <Link to="/Lobby"><img id="battle-continue-btn" src={contBtn} /></Link>
+                <img id="battle-continue-btn" src={contBtn} onClick={endGame}/>
 
             </div>
 
             <div>
                 <Hero_Shop/>
-         
+                <Wolf/>
             </div>
         </section>
 
