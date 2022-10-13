@@ -87,9 +87,20 @@ const GameContainer = () => {
         setMessages(copiedMessages);
         fetchPlayersData();
         fetchPlayerById();
+    }
 
-        // setActivePlayer(activePlayer);
-        // setActivePlayer();
+    const attackMonsterLevel1 = async () => {
+        const response = await fetch(`http://localhost:8080/games/${activePlayer.id}?battleId=1`,{
+            method:"PATCH", 
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ id: activePlayer.id })
+            // game id
+        })
+        const attackMessage = await response.json();
+        const copiedMessages = [...messages, attackMessage.message]
+        setMessages(copiedMessages);
+        fetchPlayersData();
+        fetchPlayerById();
     }
 
     const startLevel1 = async (event) => {
@@ -97,6 +108,8 @@ const GameContainer = () => {
         const startLevel1Message = await response.json();
         const copiedMessages = [...messages, startLevel1Message.message];
         setMessages(copiedMessages);
+        fetchPlayersData();
+        fetchPlayerById();
     }
 
     return (
@@ -105,7 +118,7 @@ const GameContainer = () => {
                     <Route path="/Game" element={<Game postGame={postGame}/>}/>
                     <Route path="/Lobby" element={<Lobby games={games} startLevel1={startLevel1}/>}/>
                     <Route path="/Shop" element={<Shop shop={shop} buyWeapon={buyWeapon} activePlayer={activePlayer} startLevel1={startLevel1}/>}/>
-                    <Route path="/Battle" element={<Battle messages={messages}/>}/>
+                    <Route path="/Battle" element={<Battle messages={messages} attackMonsterLevel1={attackMonsterLevel1}/>}/>
                 </Routes>
                 <div className="log">
                     {messages.map((message, index) => {

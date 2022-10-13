@@ -2,10 +2,10 @@ import {Link} from "react-router-dom";
 import './Battle.css';
 import attackBtn from "../assets/btn/attack_btn.png"
 import contBtn from "../assets/btn/continue_btn.png"
-const Battle = () => {
+const Battle = ({attackMonsterLevel1}) => {
 
     const attackMonster = (event) => {
-
+        attackMonsterLevel1();
         // http://localhost:8080/games/combat?battleId=1
     }
 

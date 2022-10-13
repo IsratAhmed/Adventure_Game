@@ -10,6 +10,19 @@ const Shop = ({shop, buyWeapon, activePlayer, startLevel1}) => {
         startLevel1();
     }
 
+    const checkWeapon = () => {
+        if(activePlayer.weapon === null){
+            return <h4>{activePlayer.name}'s gold: {activePlayer.gold}</h4>
+        } else {
+            return (
+            <>
+                <h4>{activePlayer.name}'s gold: {activePlayer.gold}</h4>
+                <h4>{activePlayer.name}'s weapon: {activePlayer.weapon.name}</h4>
+            </>
+            )
+        }
+    }
+
         return(
 
             <section className="shop-section" id="shop">
@@ -20,7 +33,9 @@ const Shop = ({shop, buyWeapon, activePlayer, startLevel1}) => {
                 </div>
             
             <h2 id="shop-name">{shop.shopName}</h2>
-            <h4>Player's gold: {activePlayer.gold}</h4>
+            
+            <div>{checkWeapon()}</div>
+            
             {/* <h3>{playerName} {returnPlayerGold}</h3> */}
             <WeaponList shop={shop} buyWeapon={buyWeapon}/>
 
