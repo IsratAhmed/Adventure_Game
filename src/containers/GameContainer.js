@@ -179,7 +179,7 @@ const GameContainer = () => {
                                                     attackMonsterLevel3={attackMonsterLevel3}/>}/>
                 </Routes>
                 <div className="log">
-                    <h5><em>Adventure Scroll:</em></h5>
+                    <h4><em>Adventure Scroll:</em></h4>
                     <ul>
                     {reversedMessages.map((message, index) => {
                         return (
