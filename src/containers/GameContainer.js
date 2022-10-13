@@ -102,11 +102,53 @@ const GameContainer = () => {
         fetchPlayersData();
         fetchPlayerById();
     }
+    const attackMonsterLevel2 = async () => {
+        const response = await fetch(`http://localhost:8080/games/${activePlayer.id}?battleId=2`,{
+            method:"PATCH", 
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ id: activePlayer.id })
+            // game id
+        })
+        const attackMessage = await response.json();
+        const copiedMessages = [...messages, attackMessage.message]
+        setMessages(copiedMessages);
+        fetchPlayersData();
+        fetchPlayerById();
+    }
+    const attackMonsterLevel3 = async () => {
+        const response = await fetch(`http://localhost:8080/games/${activePlayer.id}?battleId=3`,{
+            method:"PATCH", 
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ id: activePlayer.id })
+            // game id
+        })
+        const attackMessage = await response.json();
+        const copiedMessages = [...messages, attackMessage.message]
+        setMessages(copiedMessages);
+        fetchPlayersData();
+        fetchPlayerById();
+    }
 
-    const startLevel1 = async (event) => {
+    const startLevel1 = async () => {
         const response = await fetch("http://localhost:8080/games/combat?battleId=1");
         const startLevel1Message = await response.json();
         const copiedMessages = [...messages, startLevel1Message.message];
+        setMessages(copiedMessages);
+        fetchPlayersData();
+        fetchPlayerById();
+    }
+    const startLevel2 = async () => {
+        const response = await fetch("http://localhost:8080/games/combat?battleId=2");
+        const startLevel2Message = await response.json();
+        const copiedMessages = [...messages, startLevel2Message.message];
+        setMessages(copiedMessages);
+        fetchPlayersData();
+        fetchPlayerById();
+    }
+    const startLevel3 = async () => {
+        const response = await fetch("http://localhost:8080/games/combat?battleId=3");
+        const startLevel3Message = await response.json();
+        const copiedMessages = [...messages, startLevel3Message.message];
         setMessages(copiedMessages);
         fetchPlayersData();
         fetchPlayerById();
@@ -116,9 +158,24 @@ const GameContainer = () => {
             <div>
                 <Routes>
                     <Route path="/Game" element={<Game postGame={postGame}/>}/>
-                    <Route path="/Lobby" element={<Lobby games={games} startLevel1={startLevel1}/>}/>
-                    <Route path="/Shop" element={<Shop shop={shop} buyWeapon={buyWeapon} activePlayer={activePlayer} startLevel1={startLevel1}/>}/>
-                    <Route path="/Battle" element={<Battle messages={messages} attackMonsterLevel1={attackMonsterLevel1}/>}/>
+                    <Route path="/Lobby" element={<Lobby 
+                                                    activePlayer={activePlayer}
+                                                    startLevel1={startLevel1}
+                                                    startLevel2={startLevel2}
+                                                    startLevel3={startLevel3}/>}/>
+                    <Route path="/Shop" element={<Shop 
+                                                    shop={shop} 
+                                                    buyWeapon={buyWeapon} 
+                                                    activePlayer={activePlayer} 
+                                                    startLevel1={startLevel1}
+                                                    startLevel2={startLevel2}
+                                                    startLevel3={startLevel3}/>}/>
+                    <Route path="/Battle" element={<Battle 
+                                                    messages={messages}
+                                                    activePlayer={activePlayer}  
+                                                    attackMonsterLevel1={attackMonsterLevel1}
+                                                    attackMonsterLevel2={attackMonsterLevel2}
+                                                    attackMonsterLevel3={attackMonsterLevel3}/>}/>
                 </Routes>
                 <div className="log">
                     {messages.map((message, index) => {

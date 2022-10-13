@@ -2,10 +2,16 @@ import {Link} from "react-router-dom";
 import './Battle.css';
 import attackBtn from "../assets/btn/attack_btn.png"
 import contBtn from "../assets/btn/continue_btn.png"
-const Battle = ({attackMonsterLevel1}) => {
+const Battle = ({activePlayer, attackMonsterLevel1, attackMonsterLevel2, attackMonsterLevel3}) => {
 
     const attackMonster = (event) => {
-        attackMonsterLevel1();
+        if (activePlayer.numberOfWins === 0) {
+            attackMonsterLevel1();
+        } else if (activePlayer.numberOfWins === 1) {
+            attackMonsterLevel2();
+        } else {
+            attackMonsterLevel3();
+        }
         // http://localhost:8080/games/combat?battleId=1
     }
 
