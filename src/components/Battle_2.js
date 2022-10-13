@@ -2,9 +2,9 @@ import {Link} from "react-router-dom";
 import './Battle.css';
 import attackBtn from "../assets/btn/attack_btn.png"
 import contBtn from "../assets/btn/continue_btn.png"
-import Goblin from "./Goblin_Sprite";
+
 import Hero_Shop from "./Hero_shop_sprite";
-const Battle = ({activePlayer, attackMonsterLevel1, attackMonsterLevel2, attackMonsterLevel3}) => {
+const Battle_2 = ({activePlayer, attackMonsterLevel1, attackMonsterLevel2, attackMonsterLevel3}) => {
 
     const attackMonster = (event) => {
         if (activePlayer.numberOfWins === 0) {
@@ -30,11 +30,11 @@ const Battle = ({activePlayer, attackMonsterLevel1, attackMonsterLevel2, attackM
 
             <div>
                 <Hero_Shop/>
-                <Goblin/>
+         
             </div>
         </section>
 
     )
 }
 
-export default Battle;
+export default Battle_2;

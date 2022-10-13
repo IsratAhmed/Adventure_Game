@@ -13,13 +13,17 @@
     background-size: cover;
   
   }
-
-.weapon-list {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+  
+.weapon_list {
+  position: absolute;
+  top: 23%;  
+  width: 70%;
   display: flex;
-  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  z-index: 2;
 }
+
 
 .hide {
   display: none;
@@ -39,15 +43,38 @@
   /* color: red; */
 }
 
-#shop-name {
+/* #shop-name {
   color: white;
   font-family: "MedievalSharp";
-}
+  position: absolute;
+  top: 5%;  
+  width: 20%;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+} */
 
-.shop-section h4 {
+#player_details{
   color: white;
   font-family: "MedievalSharp";
+  position: absolute;
+  top: 5%;  
+  width: 50%;
+  display: flex-end;
+  justify-content:flex-start;
+  align-items: center;
 }
+/* .shop-section h4 {
+  color: white;
+  font-family: "MedievalSharp";
+  top: 50%;  
+  width: 40%;
+  position:relative;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+} */
+
 
 /* Shop to battle button*/
 

@@ -3,17 +3,12 @@ import './Shop.css';
 import WeaponList from "./WeaponList";
 import battleBtn from "../assets/btn/battle_btn.png"
 import {useState} from "react";
+import Hero_Shop from '../components/Hero_shop_sprite.js';  
 
-const Shop = ({shop, buyWeapon, activePlayer, startLevel1, startLevel2, startLevel3}) => {
+const Shop = ({shop, buyWeapon, activePlayer, startLevel1}) => {
 
     const handleStartGame = (event) => {
-        if (activePlayer.numberOfWins === 0) {
-            startLevel1();
-        } else if (activePlayer.numberOfWins === 1) {
-            startLevel2();
-        } else {
-            startLevel3();
-        }
+        startLevel1();
     }
 
     const checkWeapon = () => {
@@ -37,15 +32,21 @@ const Shop = ({shop, buyWeapon, activePlayer, startLevel1, startLevel2, startLev
                     <Link to="/Battle"><img id="shop-battle-btn" src={battleBtn} onClick={handleStartGame}/></Link>
     
                 </div>
-            
+            <div id="player_details">
             <h2 id="shop-name">{shop.shopName}</h2>
             
             <div>{checkWeapon()}</div>
-            
-            {/* <h3>{playerName} {returnPlayerGold}</h3> */}
+            </div>
+            <div className="weapon_list">
+           
             <WeaponList shop={shop} buyWeapon={buyWeapon}/>
+            </div>
 
+            <div>
+                <Hero_Shop/>
+            </div>
             </section>
+            
     
         )
     
