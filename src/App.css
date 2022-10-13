@@ -27,6 +27,7 @@
   }
 }
 
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -124,7 +125,7 @@ input[name="name"] {
 /* lobby-buttons */
 .lobby-buttons {
   position: absolute;
-  top: 30%;  
+  top: 10%;  
   width: 100%;
   display: flex;
   justify-content: center;
@@ -164,7 +165,7 @@ input[name="name"] {
 /* shop-buttons */
 .shop-buttons {
   position: absolute;
-  top: 20%;  
+  top: 30%;  
   /* width: 100%; */
   /* display: flex;
   justify-content:flex-end; */
