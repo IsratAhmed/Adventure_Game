@@ -10,7 +10,7 @@ export const Hero = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -19%);
+  transform: translate(-50%, -23%);
   background: url(${SpritePage}) left center;
   animation: ${animation} .8s steps(8) infinite; 
 `;
