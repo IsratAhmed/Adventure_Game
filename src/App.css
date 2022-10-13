@@ -165,7 +165,7 @@ input[name="name"] {
 /* shop-buttons */
 .shop-buttons {
   position: absolute;
-  top: 30%;  
+  top: 50%;  
   /* width: 100%; */
   /* display: flex;
   justify-content:flex-end; */
