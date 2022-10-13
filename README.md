@@ -26,3 +26,30 @@ The great knight has been summoned to journey through deep forests, deadly mount
 - [Further Implementations & Extensions](#Further-Implementations-&-Extensions)
 
 <br>
+
+## Who we are:
+We are the team behind SO:CT -  4 members of Cohort 6 from the Bright Network Technology Academy! :
+
+<details>
+<summary>Carla S Moreno Lima</summary>
+  - GitHub: (https://github.com/Carla022)
+</details>
+
+<details>
+<summary>Miglė Ambrazevičiūtė</summary>
+  - GitHub:(https://github.com/migleambr)
+</details>
+
+<details>
+<summary>Milo Curran</summary>
+  - GitHub:(https://github.com/Obilisk-audio)
+</details>
+ 
+<details>
+<summary>Israt Ahmed</summary>
+  - GitHub:(https://github.com/IsratAhmed)
+ </details>
+ 
+ ## Project Overview:
+ 
+As part of the Bright Network Technology Academy, we were assigned a collaborative project where the team was to demonstrate the ability to use an existing API. 
