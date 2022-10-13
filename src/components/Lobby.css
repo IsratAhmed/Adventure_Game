@@ -38,3 +38,8 @@
     filter: drop-shadow(0 1mm 1mm rgb(0, 0,0.19));
     transform: translateY(2px);
   }
+
+  h4 {
+    color: white;
+    font-family: "MedievalSharp";
+  }
