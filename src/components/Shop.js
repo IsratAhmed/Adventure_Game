@@ -5,10 +5,16 @@ import battleBtn from "../assets/btn/battle_btn.png"
 import {useState} from "react";
 import Hero_Shop from '../components/Hero_shop_sprite.js';  
 
-const Shop = ({shop, buyWeapon, activePlayer, startLevel1}) => {
+const Shop = ({shop, buyWeapon, activePlayer, startLevel1, startLevel2, startLevel3}) => {
 
     const handleStartGame = (event) => {
-        startLevel1();
+        if (activePlayer.numberOfWins === 0) {
+            startLevel1();
+        } else if (activePlayer.numberOfWins === 1) {
+            startLevel2();
+        } else {
+            startLevel3();
+        }
     }
 
     const checkWeapon = () => {

@@ -180,12 +180,14 @@ const GameContainer = () => {
                 </Routes>
                 <div className="log">
                     <h5><em>Adventure Scroll:</em></h5>
+                    <ul>
                     {reversedMessages.map((message, index) => {
                         return (
                             <>
                             <li key={index}>{message}</li>
                             </>
                         )})}
+                    </ul>
                 </div>
         </div>
     )
