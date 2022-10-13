@@ -3,7 +3,7 @@
 ##  Scrolls of Odyssey : Call to Tarragon
 
 <p align="center">
-<img src="https://cdn.wallpapersafari.com/57/86/fulNOQ.jpg" align="center" width="800" height="350"/>
+<img src="https://cdn.wallpapersafari.com/57/86/fulNOQ.jpg" align="center" width="800" height="400"/>
 </p>
 
 ## Table of Contents
