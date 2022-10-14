@@ -23,8 +23,8 @@ const Shop = ({shop, buyWeapon, activePlayer, startLevel1, startLevel2, startLev
         } else {
             return (
             <>
-                <h4>{activePlayer.name}'s gold: {activePlayer.gold}</h4>
-                <h4>{activePlayer.name}'s weapon: {activePlayer.weapon.name}</h4>
+                <h4 className="player-gold-after">{activePlayer.name}'s gold: {activePlayer.gold}</h4>
+                <h4 className="player-gold-after">{activePlayer.name}'s weapon: {activePlayer.weapon.name}</h4>
             </>
             )
         }
@@ -41,7 +41,7 @@ const Shop = ({shop, buyWeapon, activePlayer, startLevel1, startLevel2, startLev
             <div id="player_details">
             <h2 id="shop-name">{shop.shopName}</h2>
             
-            <div>{checkWeapon()}</div>
+            <div id="player-gold">{checkWeapon()}</div>
             </div>
             <div className="weapon_list">
            
