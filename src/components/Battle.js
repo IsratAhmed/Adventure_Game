@@ -11,14 +11,14 @@ const Battle = ({activePlayer, attackMonsterLevel1, attackMonsterLevel2, attackM
     const navigate = useNavigate();
 
     const attackMonster = (event) => {
+        // http://localhost:8080/games/combat?battleId=1
         if (activePlayer.numberOfWins === 0) {
             attackMonsterLevel1();
         } else if (activePlayer.numberOfWins === 1) {
             attackMonsterLevel2();
         } else {
             attackMonsterLevel3();
-        }
-        // http://localhost:8080/games/combat?battleId=1
+        }  
     }
 
     const endGame = (event) => {
@@ -40,7 +40,6 @@ const Battle = ({activePlayer, attackMonsterLevel1, attackMonsterLevel2, attackM
             return <Wolf/>;
         } return <Troll/>;
         // return activePlayer.numberOfWins === 1 ? <Wolf/> : <Goblin/>
-        // return activePlayer.numberOfWins === 2 ? <Wolf/> : <Goblin/>
     }
 
     return(
@@ -58,7 +57,6 @@ const Battle = ({activePlayer, attackMonsterLevel1, attackMonsterLevel2, attackM
                 {displayMonster()}
             </div>
         </section>
-
     )
 }
 

@@ -2,7 +2,7 @@ import Game from "../components/Game";
 import Lobby from "../components/Lobby";
 import Shop from "../components/Shop";
 import Battle from "../components/Battle";
-import {Routes, Route, Link, useNavigate, Navigate} from "react-router-dom";
+import {Routes, Route, useNavigate} from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const GameContainer = () => {
@@ -43,13 +43,12 @@ const GameContainer = () => {
     }
 
     const [games, setGames] = useState([]);
-
     const [messages, setMessages] = useState([]);
     const reversedMessages = messages.slice().reverse();
 
     const postGame = async(newPlayerName) => {
-        const playerIndex = players.findIndex(player => player.name === newPlayerName)
-        let player
+        const playerIndex = players.findIndex(player => player.name === newPlayerName);
+        let player;
         if(playerIndex === -1) {
             // player does not exist
             player  = await postPlayer(newPlayerName);
@@ -66,7 +65,7 @@ const GameContainer = () => {
         setGames([...games, savedGame]);
         navigate(`/Lobby`);
         // getting the Welcome Message
-        const copiedMessages = [...messages, savedGame.message]
+        const copiedMessages = [...messages, savedGame.message];
         setMessages(copiedMessages);
     }
 
@@ -84,7 +83,7 @@ const GameContainer = () => {
             body: JSON.stringify({ id: activePlayer.id })
         })
         const buyingMessage = await response.json();
-        const copiedMessages = [...messages, buyingMessage.message]
+        const copiedMessages = [...messages, buyingMessage.message];
         setMessages(copiedMessages);
         fetchPlayersData();
         fetchPlayerById();
@@ -98,7 +97,7 @@ const GameContainer = () => {
             // game id
         })
         const attackMessage = await response.json();
-        const copiedMessages = [...messages, attackMessage.message]
+        const copiedMessages = [...messages, attackMessage.message];
         setMessages(copiedMessages);
         fetchPlayersData();
         fetchPlayerById();
@@ -111,7 +110,7 @@ const GameContainer = () => {
             // game id
         })
         const attackMessage = await response.json();
-        const copiedMessages = [...messages, attackMessage.message]
+        const copiedMessages = [...messages, attackMessage.message];
         setMessages(copiedMessages);
         fetchPlayersData();
         fetchPlayerById();
@@ -181,14 +180,14 @@ const GameContainer = () => {
                 <div className="log">
                     <h4><em>Adventure Scroll:</em></h4>
                     <ul>
-                    {reversedMessages.map((message, index) => {
-                        return (
-                            <li key={index}>{message}</li>
-                        )})}
+                        {reversedMessages.map((message, index) => {
+                            return (
+                                <li key={index}>{message}</li>
+                            )})}
                     </ul>
                 </div>
-        </div>
-    )
+            </div>
+        )
 }
 
 export default GameContainer;

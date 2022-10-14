@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
-
-
 #game {
   display:flex;
   justify-content: center;
@@ -15,16 +13,6 @@
     background-size: cover;
 
 }
-
-/* #start {
-  background-image: url('/src/assets/backgrounds/play.png');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  /* put the height and width of your image here */
-  /* height: 50px;
-  width: 200px;
-  border: none; */
-
 
 #start span {
   display: none;

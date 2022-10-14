@@ -2,7 +2,6 @@ import {Link} from "react-router-dom";
 import './Shop.css';
 import WeaponList from "./WeaponList";
 import battleBtn from "../assets/btn/battle_btn.png"
-import {useState} from "react";
 import Hero_Shop from '../components/Hero_shop_sprite.js';  
 
 const Shop = ({shop, buyWeapon, activePlayer, startLevel1, startLevel2, startLevel3}) => {
@@ -38,24 +37,20 @@ const Shop = ({shop, buyWeapon, activePlayer, startLevel1, startLevel2, startLev
                     <Link to="/Battle"><img id="shop-battle-btn" src={battleBtn} onClick={handleStartGame}/></Link>
     
                 </div>
-            <div id="player_details">
-            <h2 id="shop-name">{shop.shopName}</h2>
-            
-            <div id="player-gold">{checkWeapon()}</div>
-            </div>
-            <div className="weapon_list">
+                <div id="player_details">
+                    <h2 id="shop-name">{shop.shopName}</h2>
+                    <div id="player-gold">{checkWeapon()}</div>
+                </div>
+                <div className="weapon_list">
            
-            <WeaponList shop={shop} buyWeapon={buyWeapon}/>
-            </div>
+                    <WeaponList shop={shop} buyWeapon={buyWeapon}/>
+                </div>
 
-            <div>
-                <Hero_Shop/>
-            </div>
-            </section>
-            
-    
-        )
-    
+                <div>
+                    <Hero_Shop/>
+                </div>
+            </section> 
+        )   
 }
 
 export default Shop;
