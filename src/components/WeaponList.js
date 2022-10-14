@@ -5,6 +5,8 @@ import daggerBtn from "../assets/btn/dagger.png"
 import spearBtn from "../assets/btn/spear.png"
 const WeaponList = ({shop, buyWeapon}) => {
 
+    const imageArray = [{name: "Great axe", image: axeBtn}, {name: "Sword", image: swordBtn}, {name: "Dagger", image: daggerBtn}, {name: "Spear", image: spearBtn}]
+
     const availableWeapons = shop.weapons.filter((weapon) => {
         return !weapon.player; 
     })
@@ -16,14 +18,21 @@ const WeaponList = ({shop, buyWeapon}) => {
     return (
         <>   
         <div id="item_btns">
-        <img src={axeBtn} id="g_axe" onClick={()=> {buyWeapon(availableWeapons[0].id)}}/>
-        <div className="hide">
-                <li>Max Damage: {availableWeapons[0].maxDamage}</li>
-                <li>Min Damage: {availableWeapons[0].minDamage}</li>
-                <li>Block Chance: {availableWeapons[0].blockChance}</li>
-                <li>Price: {availableWeapons[0].price}</li>
-        </div>
-        <img src={swordBtn}id="spear" onClick={()=> {buyWeapon(availableWeapons[1].id)}}/> 
+        {availableWeapons.map((availableWeapon) => {
+            return (
+            <div key={availableWeapon.name}>
+            <img src={imageArray.find((image) => image.name === availableWeapon.name).image} id="g_axe" onClick={()=> {buyWeapon(availableWeapon.id)}}/>
+                <div className="hide">
+                    <li>Max Damage: {availableWeapon.maxDamage}</li>
+                    <li>Min Damage: {availableWeapon.minDamage}</li>
+                    <li>Block Chance: {availableWeapon.blockChance}</li>
+                    <li>Price: {availableWeapon.price}</li>
+                </div>
+            </div>
+            );
+        })}
+        
+        {/* <img src={swordBtn}id="spear" onClick={()=> {buyWeapon(availableWeapons[1].id)}}/> 
         <div className="hide">
                 <li>Max Damage: {availableWeapons[1].maxDamage}</li>
                 <li>Min Damage: {availableWeapons[1].minDamage}</li>
@@ -43,7 +52,7 @@ const WeaponList = ({shop, buyWeapon}) => {
                 <li>Min Damage: {availableWeapons[3].minDamage}</li>
                 <li>Block Chance: {availableWeapons[3].blockChance}</li>
                 <li>Price: {availableWeapons[3].price}</li>
-        </div>
+        </div> */}
         </div>
         {weaponItems}
         </>
