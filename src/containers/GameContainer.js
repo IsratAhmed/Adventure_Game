@@ -188,9 +188,7 @@ const GameContainer = () => {
                 <ul>
                     {reversedMessages.map((message, index) => {
                         return (
-                            <>
                                 <li key={index}>{message}</li>
-                            </>
                         )
                     })}
                 </ul>
