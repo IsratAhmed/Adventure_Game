@@ -37,8 +37,17 @@
 
 .hide {
   display: none;
+  justify-content: center;
   color: white;
- 
+  list-style: none;
+  line-height: 1.5em;
+  font-family: "MedievalSharp";
+  font-weight: bold;
+  border: 2px solid rgb(237, 222, 54);
+  background-color: rgb(154, 82, 66);
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-right: 20px;
 }
 
 #dagger {
