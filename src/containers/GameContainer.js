@@ -45,6 +45,7 @@ const GameContainer = () => {
     const [games, setGames] = useState([]);
 
     const [messages, setMessages] = useState([]);
+    const reversedMessages = messages.slice().reverse();
 
     const postGame = async(newPlayerName) => {
         const playerIndex = players.findIndex(player => player.name === newPlayerName)
@@ -178,15 +179,13 @@ const GameContainer = () => {
                                                     attackMonsterLevel3={attackMonsterLevel3}/>}/>
                 </Routes>
                 <div className="log">
-                    {messages.map((message, index) => {
+                    <h4><em>Adventure Scroll:</em></h4>
+                    <ul>
+                    {reversedMessages.map((message, index) => {
                         return (
-                            <>
-                            <h5><em>Adventure Scroll:</em></h5>
                             <li key={index}>{message}</li>
-                            </>
-                        
-                            
                         )})}
+                    </ul>
                 </div>
         </div>
     )

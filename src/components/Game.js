@@ -47,6 +47,7 @@ const Game = ({postGame}) => {
             <Link to="/Lobby"><img src={playImg} id="newplayer-button" onClick={handlePlayerSubmit}/></Link>
         </form>
        {/* </div> */}
+
     </section>
 </div>
 

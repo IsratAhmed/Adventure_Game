@@ -13,18 +13,105 @@
     background-size: cover;
   
   }
-
-.weapon-list {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+  
+/* .weapon_list {
+  position: absolute;
+  top: 23%;  
+  width: 70%;
   display: flex;
-  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  z-index: 2;
+} */
+
+#item_btns{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 23%;  
+  width: 20%;
+  justify-content:center;
+  align-items: center;
+  z-index: 2;
 }
 
 .hide {
   display: none;
   color: white;
+ 
 }
+
+#dagger {
+  margin-right: 15px;
+} 
+
+#dagger:hover {
+  transform: scale(1.05) ;
+  filter: drop-shadow(0 1mm 1mm rgb(0, 0,0.19));
+}
+
+#dagger:active {
+  filter: drop-shadow(0 1mm 1mm rgb(0, 0,0.19));
+  transform: translateY(2px);
+}
+#dagger:hover + .hide {
+  display: block;
+}
+
+#g_axe {
+  margin-right: 15px;
+}
+
+#g_axe:hover {
+  transform: scale(1.05) ;
+  filter: drop-shadow(0 1mm 1mm rgb(0, 0,0.19));
+}
+
+#g_axe:active {
+  filter: drop-shadow(0 1mm 1mm rgb(0, 0,0.19));
+  transform: translateY(2px);
+}
+
+#g_axe:hover + .hide {
+  display: block;
+}
+
+#spear {
+  margin-right: 15px;
+}
+
+#spear:hover {
+  transform: scale(1.05) ;
+  filter: drop-shadow(0 1mm 1mm rgb(0, 0,0.19));
+}
+
+#spear:active {
+  filter: drop-shadow(0 1mm 1mm rgb(0, 0,0.19));
+  transform: translateY(2px);
+}
+
+#spear:hover + .hide {
+  display: block;
+}
+
+#sword {
+  margin-right: 15px;  
+}
+
+#sword:hover {
+  transform: scale(1.05) ;
+  filter: drop-shadow(0 1mm 1mm rgb(0, 0,0.19));
+}
+
+#sword:active {
+  filter: drop-shadow(0 1mm 1mm rgb(0, 0,0.19));
+  transform: translateY(2px);
+}
+
+#sword:hover + .hide {
+  display: block;
+}
+
 
 .weapon-list button {
   padding: 30px;
@@ -34,20 +121,56 @@
   grid-template-columns: 1fr 1fr 1fr 1fr; */
 }
 
+
 .weapon-list button:hover + .hide {
   display: block;
   /* color: red; */
 }
 
-#shop-name {
+/* #shop-name {
   color: white;
   font-family: "MedievalSharp";
+  position: absolute;
+  top: 5%;  
+  width: 20%;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+} */
+
+#player_details{
+  color: white;
+  font-family: "MedievalSharp";
+  position: absolute;
+  top: 5%;  
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.shop-section h4 {
+#player-gold {
+  /* border: 4px solid rgb(237, 222, 54);
+  background-color: rgb(154, 82, 66); */
+  width: 50%;
+  padding: 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* .shop-section h4 {
   color: white;
   font-family: "MedievalSharp";
-}
+  top: 50%;  
+  width: 40%;
+  position:relative;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+} */
+
 
 /* Shop to battle button*/
 
