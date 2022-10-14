@@ -15,7 +15,6 @@
   }
 
   /* Battle attack button */
-
   #attack-btn:hover {
     transform: scale(1.05) ;
     filter: drop-shadow(0 1mm 1mm rgb(0, 0,0.19));
@@ -28,7 +27,6 @@
   }
   
   /* Battle continue button*/
-
   #battle-continue-btn:hover {
     transform: scale(1.05) ;
     filter: drop-shadow(0 1mm 1mm rgb(0, 0,0.19));
@@ -39,3 +37,4 @@
     filter: drop-shadow(0 1mm 1mm rgb(0, 0,0.19));
     transform: translateY(2px);
   }
+  

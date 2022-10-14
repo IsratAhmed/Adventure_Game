@@ -27,7 +27,6 @@
   }
   
   /* Lobby to battle button*/
-
   #to-battle-btn:hover {
     transform: scale(1.05) ;
     filter: drop-shadow(0 1mm 1mm rgb(0, 0,0.19));
@@ -49,4 +48,3 @@
     padding: 20px;
     line-height: 1.5em;
   }
-
