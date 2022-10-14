@@ -33,7 +33,7 @@ const Battle = ({activePlayer, attackMonsterLevel1, attackMonsterLevel2, attackM
     }
 
     const displayMonster = () => {
-        if (messages[messages.length-1].includes("killing blow") || messages[messages.length-1].includes("defeated the monster")) return
+        if (messages[messages.length-1].includes("defeated the monster") || messages[messages.length-1].includes("defeated all of the monster")) return
         if (activePlayer.numberOfWins === 0) {
             return <Goblin/>;
         } if (activePlayer.numberOfWins === 1) {
