@@ -57,15 +57,15 @@ The great knight has been summoned to journey through deep forests, deadly mount
   
 1. Clone repo link -> https://github.com/IsratAhmed/Adventure_Game.git
 
-*Backend - API
+**Backend - API**
 
 2. Once the repository has been cloned, open the 'backend' folder in Visual Studio code (VSC) + run it.
 
-*Frontend - Frontend App
+**Frontend - Frontend App**
 
-3. Open the 'Adventure_game' folder in terminal -> + type the command: 'npm install' or (npm i)
+3. Open the *'Adventure_game'* folder in terminal -> type the command: 'npm install' or (npm i)
 4. Once that has run, type the command: 'code .' to open in Visual Studio code (VSC)
-5. In Visual Studio code (VSC) terminal, type the following commands:
+5. In Visual Studio code (VSC) built in terminal, type the following commands:
 
 - npm install react-router-dom@6
 - npm install react-icons
@@ -73,4 +73,4 @@ The great knight has been summoned to journey through deep forests, deadly mount
 
 6. Once the packages have been installed, open the react app in browser using the command: 'npm start'
 
-Note* the frontend app should run on ‘localhost:3000’ unless you have another application running on this port - if so, you will be prompted to use another port option i.e. localhost:3001. This will not affect the running of the project.
+*Note - the frontend app should run on ‘localhost:3000’ unless you have another application running on this port - if so, you will be prompted to use another port option i.e. localhost:3001. This will not affect the running of the project.
