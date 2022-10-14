@@ -12,7 +12,7 @@
 - [Who We Are](#who-we-are)
 - [Project Overview](#project-overview)
 - [About The Project](#About-The-Project)
-- [Setup & Instructions](#setup-&-instructions)
+- [Setup & Instructions:](#setup-&-instructions:)
 - [Project Structure](#)
 - [Further Implementations & Extensions](#Further-Implementations-&-Extensions)
 
