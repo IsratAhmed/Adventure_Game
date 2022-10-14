@@ -100,7 +100,7 @@ section {
 
 .instructionContainer {
   height: 100%;
-
+  line-height: 1.5em;
 }
 
 .instructionContainer hr {
@@ -110,7 +110,6 @@ section {
   border-style: solid;
   border-color: goldenrod;
   border-width: 0 0 0.2px 0;
-
 }
 
 input[name="name"] {
