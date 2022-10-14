@@ -4,7 +4,9 @@ import attackBtn from "../assets/btn/attack_btn.png"
 import contBtn from "../assets/btn/continue_btn.png"
 import Goblin from "./Goblin_Sprite";
 import Hero_Shop from "./Hero_shop_sprite";
-const Battle = ({activePlayer, attackMonsterLevel1, attackMonsterLevel2, attackMonsterLevel3}) => {
+import Wolf from "./Wolf_Sprite";
+import Troll from "./Troll_Sprite";
+const Battle = ({activePlayer, attackMonsterLevel1, attackMonsterLevel2, attackMonsterLevel3, messages}) => {
 
     const navigate = useNavigate();
 
@@ -30,6 +32,17 @@ const Battle = ({activePlayer, attackMonsterLevel1, attackMonsterLevel2, attackM
         }
     }
 
+    const displayMonster = () => {
+        if (messages[messages.length-1].includes("killing blow") || messages[messages.length-1].includes("defeated the monster")) return
+        if (activePlayer.numberOfWins === 0) {
+            return <Goblin/>;
+        } if (activePlayer.numberOfWins === 1) {
+            return <Wolf/>;
+        } return <Troll/>;
+        // return activePlayer.numberOfWins === 1 ? <Wolf/> : <Goblin/>
+        // return activePlayer.numberOfWins === 2 ? <Wolf/> : <Goblin/>
+    }
+
     return(
 
         <section className="battle-section" id="battle">
@@ -42,7 +55,7 @@ const Battle = ({activePlayer, attackMonsterLevel1, attackMonsterLevel2, attackM
 
             <div>
                 <Hero_Shop/>
-                <Goblin/>
+                {displayMonster()}
             </div>
         </section>
 
