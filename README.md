@@ -9,10 +9,10 @@
 <br>
 
 ## Table of Contents
-- [Who We Are](#who-we-are)
-- [Project Overview](#project-overview)
+- [Who We Are](#who-We-Are)
+- [Project Overview](#Project-Overview)
 - [About The Project](#About-The-Project)
-- [Setup & Instructions](#setup-&-instructions)
+- [Setup & Instructions](#Setup-&-Instructions)
 - [Project Structure](#)
 - [Further Implementations & Extensions](#Further-Implementations-&-Extensions)
 
@@ -59,7 +59,7 @@ The great knight has been summoned to journey through deep forests, deadly mount
 
 **Backend - API**
 
-2. Once the repository has been cloned, open the 'backend' folder in Visual Studio code (VSC) + run it.
+2. Once the repository has been cloned, open the *'backend'* folder in Visual Studio code (VSC) + run it.
 
 **Frontend - Frontend App**
 
