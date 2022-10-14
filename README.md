@@ -9,21 +9,13 @@
 <br>
 
 ## Table of Contents
-- [About](#About)
 - [Who We Are](#who-we-are)
 - [Project Overview](#project-overview)
+- [About The Project](#About-The-Project)
 - [Setup & Instructions](#setup-&-instructions)
 - [Project Structure](#)
 - [Further Implementations & Extensions](#Further-Implementations-&-Extensions)
 
-## About:
-#### A nail-biting fantasy adventure, in a world full of dangerous creatures:
-
-<p>
-
-The great knight has been summoned to journey through deep forests, deadly mountains and monster infested caves, to defeat the mighty troll of Tarragon. </p>
-
-*But beware! - You will be entering rival territories...* 
 
 ## Who we are:
 We are the team behind SO:CT -  4 members of Cohort 6 from the Bright Network Technology Academy! :
@@ -48,6 +40,16 @@ We are the team behind SO:CT -  4 members of Cohort 6 from the Bright Network Te
   - GitHub:(https://github.com/IsratAhmed)
  </details>
  
- ## Project Overview:
+  ## Project Overview:
  
-As part of the Bright Network Technology Academy, we were assigned a collaborative project where the team was to demonstrate the ability to use an existing API. 
+As part of the Bright Network Technology Academy, we were assigned a collaborative project where the team was to demonstrate the ability to use an existing API.
+
+## About The Project:
+#### A nail-biting fantasy adventure, in a world full of dangerous creatures:
+
+<p>
+
+The great knight has been summoned to journey through deep forests, deadly mountains and monster infested caves, to defeat the mighty troll of Tarragon. </p>
+
+*But beware! - You will be entering rival territories...* 
+  
